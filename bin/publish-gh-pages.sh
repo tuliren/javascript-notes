@@ -1,8 +1,10 @@
+#!/bin/sh
+
 # install the plugins and build the static site
 gitbook install && gitbook build
 
 # checkout to the gh-pages branch
-git checkout gh-pages
+git branch gh-pages && git checkout gh-pages
 
 # pull the latest updates
 git pull origin gh-pages --rebase
