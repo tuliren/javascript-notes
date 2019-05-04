@@ -1,0 +1,486 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Functions · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-anchors/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="06-arrays.html" />
+    
+    
+    <link rel="prev" href="04-loops.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Contents
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" >
+            
+                <span>
+            
+                    
+                    Intro to JavaScript
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="01-javascript.html">
+            
+                <a href="01-javascript.html">
+            
+                    
+                    Overview
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="02-data-types.html">
+            
+                <a href="02-data-types.html">
+            
+                    
+                    Data types
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="03-conditionals.html">
+            
+                <a href="03-conditionals.html">
+            
+                    
+                    Conditionals
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="04-loops.html">
+            
+                <a href="04-loops.html">
+            
+                    
+                    Loops
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.2.5" data-path="05-functions.html">
+            
+                <a href="05-functions.html">
+            
+                    
+                    Functions
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6" data-path="06-arrays.html">
+            
+                <a href="06-arrays.html">
+            
+                    
+                    Arrays
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.7" data-path="07-objects.html">
+            
+                <a href="07-objects.html">
+            
+                    
+                    Objects
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >Functions</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="intro-to-functions"><a name="intro-to-functions" class="plugin-anchor" href="#intro-to-functions"><i class="fa fa-link" aria-hidden="true"></i></a>Intro to Functions</h1>
+<h2 id="syntax"><a name="syntax" class="plugin-anchor" href="#syntax"><i class="fa fa-link" aria-hidden="true"></i></a>Syntax</h2>
+<pre><code class="lang-js"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">name</span>(<span class="hljs-params">params</span>) </span>{
+  <span class="hljs-comment">// code block</span>
+}
+</code></pre>
+<h2 id="parameter-vs-argument"><a name="parameter-vs-argument" class="plugin-anchor" href="#parameter-vs-argument"><i class="fa fa-link" aria-hidden="true"></i></a>Parameter vs argument</h2>
+<ul>
+<li>Parameter: a variable name that appears in the function declaration.</li>
+<li>Argument: a value that appears in the code when the function is invoked.</li>
+<li>Parameters are always passed by value.</li>
+</ul>
+<h2 id="return-value"><a name="return-value" class="plugin-anchor" href="#return-value"><i class="fa fa-link" aria-hidden="true"></i></a>Return value</h2>
+<ul>
+<li>A function always returns some value back to the caller.</li>
+<li>When return value is not specified, the function will return <code>undefined</code>.<ul>
+<li>E.g. <code>console.log</code></li>
+</ul>
+</li>
+</ul>
+<h2 id="scope"><a name="scope" class="plugin-anchor" href="#scope"><i class="fa fa-link" aria-hidden="true"></i></a>Scope</h2>
+<ul>
+<li>Global scope<ul>
+<li>Variables defined outside of an function</li>
+</ul>
+</li>
+<li>Function scope</li>
+</ul>
+<h2 id="shadowing"><a name="shadowing" class="plugin-anchor" href="#shadowing"><i class="fa fa-link" aria-hidden="true"></i></a>Shadowing</h2>
+<ul>
+<li>Global variable can be overriden inside a function.</li>
+<li>Preventable by redeclaring the same variable in the function.</li>
+</ul>
+<pre><code class="lang-js"><span class="hljs-comment">// shadowing</span>
+<span class="hljs-keyword">var</span> a = <span class="hljs-string">&quot;a&quot;</span>;
+<span class="hljs-keyword">var</span> b = <span class="hljs-string">&quot;b&quot;</span>;
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">shadow</span>(<span class="hljs-params"></span>) </span>{
+  a = <span class="hljs-string">&quot;c&quot;</span>;     <span class="hljs-comment">// shadowing</span>
+  <span class="hljs-keyword">var</span> b = <span class="hljs-string">&quot;c&quot;</span>; <span class="hljs-comment">// no shadowing</span>
+}
+
+<span class="hljs-built_in">console</span>.log(a); <span class="hljs-comment">// a</span>
+<span class="hljs-built_in">console</span>.log(b); <span class="hljs-comment">// b</span>
+shadow();
+<span class="hljs-built_in">console</span>.log(a); <span class="hljs-comment">// c, shadowed</span>
+<span class="hljs-built_in">console</span>.log(b); <span class="hljs-comment">// b</span>
+</code></pre>
+<h2 id="hoisting"><a name="hoisting" class="plugin-anchor" href="#hoisting"><i class="fa fa-link" aria-hidden="true"></i></a>Hoisting</h2>
+<ul>
+<li>Before any JavaScript is executed, all function declarations are &quot;hoisted&quot; to the top of their current scope.</li>
+<li>Functions can be called before they are defined in a scope.</li>
+<li>Only declaration is hoisted. Assignment is not. So hoisted variables can still be undefined.</li>
+<li>The best practice is to define functions at the top of the scripts, and variables at the top of the functions.</li>
+</ul>
+<pre><code class="lang-js"><span class="hljs-comment">// only declaration is hoisted</span>
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">sayGreeting</span>(<span class="hljs-params"></span>) </span>{
+  <span class="hljs-built_in">console</span>.log(greeting);
+  <span class="hljs-keyword">var</span> greeting = <span class="hljs-string">&quot;hello&quot;</span>;
+}
+sayGreeting(); <span class="hljs-comment">// undefined</span>
+
+<span class="hljs-comment">// equivalent function</span>
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">sayGreeting</span>(<span class="hljs-params"></span>) </span>{
+  <span class="hljs-keyword">var</span> greeting;
+  <span class="hljs-built_in">console</span>.log(greeting);
+  greeting = <span class="hljs-string">&quot;hello&quot;</span>;
+}
+
+<span class="hljs-comment">// hoisting prevents access of global variable</span>
+<span class="hljs-keyword">var</span> greeting = <span class="hljs-string">&quot;hello&quot;</span>;
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">sayGreeting</span>(<span class="hljs-params"></span>) </span>{
+  <span class="hljs-built_in">console</span>.log(greeting); <span class="hljs-comment">// undefined</span>
+  <span class="hljs-keyword">var</span> greeting = <span class="hljs-string">&quot;hello2&quot;</span>;
+}
+sayGreeting(); <span class="hljs-comment">// undefined</span>
+</code></pre>
+<h2 id="function-as-parameters"><a name="function-as-parameters" class="plugin-anchor" href="#function-as-parameters"><i class="fa fa-link" aria-hidden="true"></i></a>Function as parameters</h2>
+<ul>
+<li>A function passed into another function is called a <strong>callback</strong>.</li>
+</ul>
+<h2 id="function-expressions"><a name="function-expressions" class="plugin-anchor" href="#function-expressions"><i class="fa fa-link" aria-hidden="true"></i></a>Function expressions</h2>
+<ul>
+<li>A function stored in a variable.</li>
+<li>Anonymous function.
+```js
+var variable = function(params) {
+// anonymous function body
+}</li>
+</ul>
+<p>variable();</p>
+<pre><code>
+- Use the variable name to call the function.
+- Function expressions are not hoisted.
+
+```js
+sayGreeting(); // sayGreetings is not a function
+var sayGreeting = function() {
+  console.log(&quot;hello&quot;);
+}
+
+// equivalent code
+var sayGreeting;
+sayGreeting();
+sayGreeting = function() {
+  console.log(&quot;hello&quot;);
+}
+</code></pre><h2 id="named-function-expressions"><a name="named-function-expressions" class="plugin-anchor" href="#named-function-expressions"><i class="fa fa-link" aria-hidden="true"></i></a>Named function expressions</h2>
+<pre><code class="lang-js"><span class="hljs-keyword">var</span> variable = <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">name</span>(<span class="hljs-params">params</span>) </span>{
+  <span class="hljs-comment">// function body</span>
+}
+variable();
+<span class="hljs-comment">// call name() gives an error</span>
+</code></pre>
+<h2 id="inline-function-expressions"><a name="inline-function-expressions" class="plugin-anchor" href="#inline-function-expressions"><i class="fa fa-link" aria-hidden="true"></i></a>Inline function expressions</h2>
+<ul>
+<li>Using function expressions that pass a function into another function inline, is really common in JavaScript.
+```js
+function movies(messageFunction, name) {
+messageFunction(name);
+}</li>
+</ul>
+<p>movies(function displayFavorite(movieName) {
+  console.log(&quot;My favorite movie is &quot; + movieName);
+}, &quot;Finding Nemo&quot;);</p>
+<pre><code>
+- Anonymous inline function expressions are often used for function callbacks that are not going to be reused elsewhere.
+
+```js
+function movies(messageFunction, name) {
+  messageFunction(name);
+}
+
+movies(function(movieName) {
+  console.log(&quot;My favorite movie is &quot; + movieName);
+}, &quot;Finding Nemo&quot;);
+</code></pre>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="04-loops.html" class="navigation navigation-prev " aria-label="Previous page: Loops">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="06-arrays.html" class="navigation navigation-next " aria-label="Next page: Arrays">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Functions","level":"1.2.5","depth":2,"next":{"title":"Arrays","level":"1.2.6","depth":2,"path":"intro-to-javascript/06-arrays.md","ref":"intro-to-javascript/06-arrays.md","articles":[]},"previous":{"title":"Loops","level":"1.2.4","depth":2,"path":"intro-to-javascript/04-loops.md","ref":"intro-to-javascript/04-loops.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["-sharing","github","anchors","splitter"],"pluginsConfig":{"github":{"url":"https://github.com/tuliren/javascript-notes"},"anchors":{},"splitter":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"intro-to-javascript/05-functions.md","mtime":"2019-04-15T09:54:47.872Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-05-04T20:22:13.173Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-github/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

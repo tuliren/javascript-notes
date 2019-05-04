@@ -1,0 +1,440 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Arrays · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-anchors/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="07-objects.html" />
+    
+    
+    <link rel="prev" href="05-functions.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Contents
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" >
+            
+                <span>
+            
+                    
+                    Intro to JavaScript
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="01-javascript.html">
+            
+                <a href="01-javascript.html">
+            
+                    
+                    Overview
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="02-data-types.html">
+            
+                <a href="02-data-types.html">
+            
+                    
+                    Data types
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="03-conditionals.html">
+            
+                <a href="03-conditionals.html">
+            
+                    
+                    Conditionals
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="04-loops.html">
+            
+                <a href="04-loops.html">
+            
+                    
+                    Loops
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="05-functions.html">
+            
+                <a href="05-functions.html">
+            
+                    
+                    Functions
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.2.6" data-path="06-arrays.html">
+            
+                <a href="06-arrays.html">
+            
+                    
+                    Arrays
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.7" data-path="07-objects.html">
+            
+                <a href="07-objects.html">
+            
+                    
+                    Objects
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >Arrays</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="arrays"><a name="arrays" class="plugin-anchor" href="#arrays"><i class="fa fa-link" aria-hidden="true"></i></a>Arrays</h1>
+<h2 id="array-properties"><a name="array-properties" class="plugin-anchor" href="#array-properties"><i class="fa fa-link" aria-hidden="true"></i></a>Array properties</h2>
+<ul>
+<li><code>length</code></li>
+</ul>
+<h2 id="array-methods"><a name="array-methods" class="plugin-anchor" href="#array-methods"><i class="fa fa-link" aria-hidden="true"></i></a>Array methods</h2>
+<ul>
+<li><code>reverse()</code></li>
+<li><code>sort()</code></li>
+<li><code>push()</code>: return the length of the array after the push</li>
+<li><code>pop()</code></li>
+<li><code>shift()</code>: remove first element, and return the removed element</li>
+<li><code>join(delimiter)</code>: concatenate the elements into a string</li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/splice" target="_blank"><code>splice()</code></a><ul>
+<li>Add or remove elements from anywhere in an array</li>
+<li>Return an arrary of removed elements</li>
+<li>Parameters<ul>
+<li>index</li>
+<li>number of elements to remove</li>
+<li>elements to add</li>
+</ul>
+</li>
+<li><code>push(item)</code> is equivalent to <code>splice(array.length, 0, item)</code></li>
+<li><code>pop()</code> is equivalent to <code>splice(-1, 1)</code> or <code>splice(array.length - 1, 1)</code></li>
+</ul>
+</li>
+</ul>
+<h2 id="foreach"><a name="foreach" class="plugin-anchor" href="#foreach"><i class="fa fa-link" aria-hidden="true"></i></a><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach" target="_blank"><code>forEach()</code></a></h2>
+<ul>
+<li>Take a function with three parameters<ul>
+<li>element</li>
+<li>index (optional)</li>
+<li>array (optional)</li>
+</ul>
+</li>
+<li>Return <code>undefined</code></li>
+<li>Iterate through at most the number of elements before iteration<ul>
+<li>If new elements are added, they may be iterated as long as their index is wihtin the original iteration range.</li>
+<li>If some elements are deleted, the iteration will not run into overflow issue.</li>
+</ul>
+</li>
+<li>Iterate the next element according to index</li>
+</ul>
+<pre><code class="lang-js">a = [<span class="hljs-number">0</span>, <span class="hljs-number">1</span>, <span class="hljs-number">2</span>];
+a.forEach(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">element, index, array</span>) </span>{
+  <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&quot;index &quot;</span> + index + <span class="hljs-string">&quot; before: &quot;</span> + element + <span class="hljs-string">&quot;, &quot;</span> + array);
+  <span class="hljs-keyword">if</span> (index === <span class="hljs-number">1</span>) {
+    array.splice(index, <span class="hljs-number">0</span>, <span class="hljs-number">10</span>);
+  }
+  <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&quot;index &quot;</span> + index + <span class="hljs-string">&quot; after:  &quot;</span> + element + <span class="hljs-string">&quot;, &quot;</span> + array);
+});
+
+<span class="hljs-comment">// index 0 before: 0, 0,1,2</span>
+<span class="hljs-comment">// index 0 after:  0, 0,1,2</span>
+<span class="hljs-comment">// index 1 before: 1, 0,1,2</span>
+<span class="hljs-comment">// index 1 after:  1, 0,10,1,2</span>
+<span class="hljs-comment">// index 2 before: 1, 0,10,1,2</span>
+<span class="hljs-comment">// index 2 after:  1, 0,10,1,2</span>
+</code></pre>
+<ul>
+<li>In the example, an element is added to the array, but the iteration only goes through three elements.</li>
+<li><p>Element <code>1</code> is iterated through twice, because it is the second element before the change, and then pushed to the third position after the change, and the iteration goes from second to third position, regardless of the added element.</p>
+</li>
+<li><p>Elemented are passed by value (<a href="https://stackoverflow.com/a/31298343" target="_blank">reference</a>)
+```js
+var arr = [{ num : 1 }, { num : 2 }, { num : 3 }];
+arr.forEach(function(part, index) {
+// part and arr[index] point to the same object, so
+// changing the object that part points to also changes
+// the object that arr[index] points to
+part.num = 4;
+});
+console.log(arr);
+// [{ num : 4 }, { num : 4 }, { num : 4 }]</p>
+</li>
+</ul>
+<p>var arr = [{ num : 1 }, { num : 2 }, { num : 3 }];</p>
+<p>arr.forEach(function(part, index) {
+  // change part to point to a new object will
+  // not change the objects stored in arr
+  part = 4;
+});
+console.log(arr);
+// [{ num : 1 }, { num : 2 }, { num : 3 }]
+```</p>
+<h2 id="map"><a name="map" class="plugin-anchor" href="#map"><i class="fa fa-link" aria-hidden="true"></i></a><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map" target="_blank"><code>map()</code></a></h2>
+<ul>
+<li>Return a new array from the original array</li>
+</ul>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="05-functions.html" class="navigation navigation-prev " aria-label="Previous page: Functions">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="07-objects.html" class="navigation navigation-next " aria-label="Next page: Objects">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Arrays","level":"1.2.6","depth":2,"next":{"title":"Objects","level":"1.2.7","depth":2,"path":"intro-to-javascript/07-objects.md","ref":"intro-to-javascript/07-objects.md","articles":[]},"previous":{"title":"Functions","level":"1.2.5","depth":2,"path":"intro-to-javascript/05-functions.md","ref":"intro-to-javascript/05-functions.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["-sharing","github","anchors","splitter"],"pluginsConfig":{"github":{"url":"https://github.com/tuliren/javascript-notes"},"anchors":{},"splitter":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"intro-to-javascript/06-arrays.md","mtime":"2019-04-15T10:17:20.455Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-05-04T20:22:13.173Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-github/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
