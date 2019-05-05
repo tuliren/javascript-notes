@@ -7,3 +7,8 @@
   * [Functions](intro-to-javascript/05-functions.md)
   * [Arrays](intro-to-javascript/06-arrays.md)
   * [Objects](intro-to-javascript/07-objects.md)
+* Object-Oriented JavaScript
+  * [Objects in depth](object-oriented-javascript/01-objects-in-depth.md)
+  * [Functions at runtime](object-oriented-javascript/02-functions-at-runtime.md)
+  * [Classes and objects](object-oriented-javascript/03-classes-and-objects.md)
+  * [Object-oriented design patterns](object-oriented-javascript/04-objects-oriented-design-patterns.md)
