@@ -30,3 +30,11 @@ object instanceof ClassName;
 typeof object
 // "object"
 ```
+
+## `this` in objects
+- A value for `this` is set when a method is invoked on an object, and that value refers to that object.
+- Four ways to call functions
+  - Calling a constructor function with the `new` keyword sets `this` to a newly-created object.
+  - Calling a method sets `this` to the object that owns the method.
+  - Calling a function on its own (i.e. invoking a regular function) sets `this` to `window`.
+  - Calling a function with `call` or `apply` allow customization of `this`.
