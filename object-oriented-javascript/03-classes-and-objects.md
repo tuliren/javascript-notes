@@ -238,10 +238,14 @@ function Cat (name) {
   this.lives = 9;
 }
 
+Cat.prototype.constructor === Cat
+// true
+
 // link Cat.prototype.__proto__ to Animal.prototype
 Cat.prototype = Object.create(Animal.prototype);
 
-// now Cat's constructor is set to Animal
+// now Cat prototype's constructor is set to Animal
+// https://stackoverflow.com/a/20830553
 Cat.prototype.constructor
 // Animal
 
