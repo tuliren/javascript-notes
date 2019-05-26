@@ -68,6 +68,7 @@ console.log( returnedFunction() );
   - Defines a function
   - Does *not* require a variable to be assigned to it
   - Does *not* return a value
+
 ```js
 function returnHello() {
   return 'Hello!';
@@ -79,6 +80,7 @@ function returnHello() {
   - Can be anonymous or named
   - Part of another expression's syntax
   - Commonly assigned to variables
+
 ```js
 // anonymous
 const myFunction = function () {
@@ -147,6 +149,7 @@ const myFunction = (
   </body>
 </html>
 ```
+
 ```js
 // button.js
 const button = document.getElementById('button');

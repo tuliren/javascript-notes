@@ -1,9 +1,10 @@
 # Classes and objects
 
 ## Constructor function
-  - Persist data with the `this` keyword.
-  - No explicit return value.
-  - Can have parameters.
+- Persist data with the `this` keyword.
+- No explicit return value.
+- Can have parameters.
+
 ```js
 function SoftwareDeveloper(name) {
   this.favoriteLanguage = 'JavaScript';
@@ -13,6 +14,7 @@ function SoftwareDeveloper(name) {
 
 ## Creating a new object
 - Use the `new` operator.
+
 ```js
 let developer = new SoftwareDeveloper('David');
 ```
@@ -23,6 +25,7 @@ let developer = new SoftwareDeveloper('David');
 ## The `instanceof` operator
 - This operator confirms whether an object is created by a specific constructor function.
 - This operator actually tests whether the constructor appears in the prototype chain of an object.
+
 ```js
 object instanceof ClassName;
 // return a boolean
@@ -41,12 +44,14 @@ typeof object
 
 ## `call()`
 - Set `this` to custom objects.
+
 ```js
 // this variable is set to thisObject in the invocation
 function.call(thisObject, arguments)
 ```
 
 - Invoke functions attached to objects (i.e. methods).
+
 ```js
 const mockingbird = {
   title: 'To Kill a Mockingbird',
@@ -66,12 +71,14 @@ mockingbird.describe.call(pride);
 ## `apply()`
 - Pass in arguments in an array.
 - Useful when the number of arguments is unknown.
+
 ```js
 function.apply(thisObject, [arguments])
 ```
 
 ## `bind()`
 - When methods are passed in as a callback, `this` reference may be lost.
+
 ```js
 function invokeTwice(cb) {
    cb();
@@ -95,6 +102,7 @@ dog.age;
 ```
 
 - Use anonymous closure to close over the `dog` object.
+
 ```js
 invokeTwice(function () {
   // growOneYear is directly call onto the dog object
@@ -107,6 +115,7 @@ dog.age;
 
 - `bind()` method provides an less verbose alternative approach.
 - It is called onto a function and returns a copy of that function with a specified this value.
+
 ```js
 const growOneYearMethod = dog.growOneYear.bind(dog);
 invokeTwice(growOneYearMethod);
@@ -187,6 +196,7 @@ cat2.isHungry;
 
 ## `__proto__`
 - An object is secretly linked to its constructor function's `prototype` object through that instance's `__proto__` property.
+
 ```js
 object.__proto__ === object.constructor.prototype;
 // true
@@ -209,6 +219,7 @@ Child.prototype = Parent.prototype
 - Use `Object.create()` to manage inheritance without altering the prototype.
 - This method takes in a single object as an argument, and returns a new object with its `__proto__` property set to the argument passed into it.
 - Objects created with this method extend from the passed in argument.
+
 ```js
 const mammal = {
   vertebrate: true,
@@ -221,6 +232,7 @@ console.log(rabbit.__proto__ === mammal);
 ```
 
 - Create inheritance
+
 ```js
 function Animal (name) {
   this.name = name;

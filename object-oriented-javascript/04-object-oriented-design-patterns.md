@@ -76,6 +76,7 @@ const mixedCoffeeMaker = CoffeeMaker({ style: 'percolator' });
 - JavaScript has no concept of private properties out-of-the-box. There is no special syntax or keyword we can use to protect certain properties from being accessed.
 - Some object properties and method names may be prefixed with an underscore (`_`). It They are private by convention only.
 - we can use scope and closures to create a private state.
+
 ```js
 function myCounter() {
   let count = 0;
@@ -97,6 +98,7 @@ counter();
 
 ## Module Pattern
 - Use function scope, closure, and IIFE.
+
 ```js
 let moduleVar = (function () {
   return {
