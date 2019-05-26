@@ -1,10 +1,7 @@
 const gulp = require("gulp");
-const sass = require("gulp-sass");
-const autoprefixer = require("gulp-autoprefixer");
-
-gulp.task("default", function() {
-  console.log("hello world!");
-});
+const sass = require('gulp-sass');
+const watch = require('gulp-watch');
+const autoprefixer = require('gulp-autoprefixer');
 
 gulp.task("styles", function() {
   gulp
@@ -12,8 +9,14 @@ gulp.task("styles", function() {
     .pipe(sass().on("error", sass.logError))
     .pipe(
       autoprefixer({
-        browsers: ["last 2 versions"]
+        browsers: ['last 2 versions']
       })
     )
     .pipe(gulp.dest("./css"));
+});
+
+// default default task
+gulp.task("default", function() {
+  // watch for sass changes and run styles task
+  watch("sass/**/*.scss", gulp.series("styles"));
 });

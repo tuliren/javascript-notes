@@ -1,0 +1,23 @@
+{
+  "name": "project",
+  "version": "1.0.0",
+  "description": "Sample project for demo of web tooling automation.",
+  "repository": "https://github.com/tuliren/javascript-notes",
+  "main": "gulpfile.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^6.1.0",
+    "gulp-watch": "^5.0.1"
+  },
+  "dependencies": {
+    "gulp-sass": "^4.0.2"
+  }
+}
