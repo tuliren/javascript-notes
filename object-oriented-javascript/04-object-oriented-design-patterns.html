@@ -435,43 +435,47 @@
 <ul>
 <li>JavaScript has no concept of private properties out-of-the-box. There is no special syntax or keyword we can use to protect certain properties from being accessed.</li>
 <li>Some object properties and method names may be prefixed with an underscore (<code>_</code>). It They are private by convention only.</li>
-<li><p>we can use scope and closures to create a private state.
-```js
-function myCounter() {
-let count = 0;</p>
-<p>return function () {
-  count += 1;
-  return count;
-};
-}</p>
-</li>
+<li>we can use scope and closures to create a private state.</li>
 </ul>
-<p>let counter = myCounter();</p>
-<p>counter();
-// 1</p>
-<p>counter();
-// 2</p>
-<pre><code>
-## Module Pattern
-- Use function scope, closure, and IIFE.
-```js
-let moduleVar = (function () {
-  return {
-    // privatr variable
-    let privateVar = &apos;private variable&apos;;
-    return {
-      // setter
-      setVar: function (varValue) {
+<pre><code class="lang-js"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">myCounter</span>(<span class="hljs-params"></span>) </span>{
+  <span class="hljs-keyword">let</span> count = <span class="hljs-number">0</span>;
+
+  <span class="hljs-keyword">return</span> <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
+    count += <span class="hljs-number">1</span>;
+    <span class="hljs-keyword">return</span> count;
+  };
+}
+
+<span class="hljs-keyword">let</span> counter = myCounter();
+
+counter();
+<span class="hljs-comment">// 1</span>
+
+counter();
+<span class="hljs-comment">// 2</span>
+</code></pre>
+<h2 id="module-pattern"><a name="module-pattern" class="plugin-anchor" href="#module-pattern"><i class="fa fa-link" aria-hidden="true"></i></a>Module Pattern</h2>
+<ul>
+<li>Use function scope, closure, and IIFE.</li>
+</ul>
+<pre><code class="lang-js"><span class="hljs-keyword">let</span> moduleVar = (<span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
+  <span class="hljs-keyword">return</span> {
+    <span class="hljs-comment">// privatr variable</span>
+    <span class="hljs-keyword">let</span> privateVar = <span class="hljs-string">&apos;private variable&apos;</span>;
+    <span class="hljs-keyword">return</span> {
+      <span class="hljs-comment">// setter</span>
+      setVar: <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">varValue</span>) </span>{
         privateVar = varValue;
       }
-      // getter
-      getVar: function () {
-        return privateVar;
+      <span class="hljs-comment">// getter</span>
+      getVar: <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
+        <span class="hljs-keyword">return</span> privateVar;
       }
     }
   };
 }());
-</code></pre><ul>
+</code></pre>
+<ul>
 <li>Advantages of module pattern:<ul>
 <li>Private properties</li>
 <li>Usage of IIFE that prevents pollution of global scope</li>
@@ -560,7 +564,7 @@ let moduleVar = (function () {
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Object-oriented design patterns","level":"1.3.4","depth":2,"previous":{"title":"Classes and objects","level":"1.3.3","depth":2,"path":"object-oriented-javascript/03-classes-and-objects.md","ref":"object-oriented-javascript/03-classes-and-objects.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["-sharing","github","anchors","splitter"],"pluginsConfig":{"github":{"url":"https://github.com/tuliren/javascript-notes"},"anchors":{},"splitter":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"object-oriented-javascript/04-object-oriented-design-patterns.md","mtime":"2019-05-26T20:36:56.524Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-05-26T20:42:51.445Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Object-oriented design patterns","level":"1.3.4","depth":2,"previous":{"title":"Classes and objects","level":"1.3.3","depth":2,"path":"object-oriented-javascript/03-classes-and-objects.md","ref":"object-oriented-javascript/03-classes-and-objects.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["-sharing","github","anchors","splitter"],"pluginsConfig":{"github":{"url":"https://github.com/tuliren/javascript-notes"},"anchors":{},"splitter":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"object-oriented-javascript/04-object-oriented-design-patterns.md","mtime":"2019-05-26T20:44:17.221Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-05-26T20:48:27.103Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

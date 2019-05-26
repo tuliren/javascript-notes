@@ -341,18 +341,20 @@
 <ul>
 <li>Persist data with the <code>this</code> keyword.</li>
 <li>No explicit return value.</li>
-<li>Can have parameters.<pre><code class="lang-js"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">SoftwareDeveloper</span>(<span class="hljs-params">name</span>) </span>{
-<span class="hljs-keyword">this</span>.favoriteLanguage = <span class="hljs-string">&apos;JavaScript&apos;</span>;
-<span class="hljs-keyword">this</span>.name = name;
+<li>Can have parameters.</li>
+</ul>
+<pre><code class="lang-js"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">SoftwareDeveloper</span>(<span class="hljs-params">name</span>) </span>{
+  <span class="hljs-keyword">this</span>.favoriteLanguage = <span class="hljs-string">&apos;JavaScript&apos;</span>;
+  <span class="hljs-keyword">this</span>.name = name;
 }
 </code></pre>
-</li>
-</ul>
 <h2 id="creating-a-new-object"><a name="creating-a-new-object" class="plugin-anchor" href="#creating-a-new-object"><i class="fa fa-link" aria-hidden="true"></i></a>Creating a new object</h2>
 <ul>
-<li>Use the <code>new</code> operator.<pre><code class="lang-js"><span class="hljs-keyword">let</span> developer = <span class="hljs-keyword">new</span> SoftwareDeveloper(<span class="hljs-string">&apos;David&apos;</span>);
+<li>Use the <code>new</code> operator.</li>
+</ul>
+<pre><code class="lang-js"><span class="hljs-keyword">let</span> developer = <span class="hljs-keyword">new</span> SoftwareDeveloper(<span class="hljs-string">&apos;David&apos;</span>);
 </code></pre>
-</li>
+<ul>
 <li>When the <code>new</code> operator is not used, no object is created.<ul>
 <li>The function is invoked like a regular function.</li>
 <li>Since there is no return value, the variable will be assigned to <code>undefined</code>.</li>
@@ -362,88 +364,100 @@
 <h2 id="the-instanceof-operator"><a name="the-instanceof-operator" class="plugin-anchor" href="#the-instanceof-operator"><i class="fa fa-link" aria-hidden="true"></i></a>The <code>instanceof</code> operator</h2>
 <ul>
 <li>This operator confirms whether an object is created by a specific constructor function.</li>
-<li>This operator actually tests whether the constructor appears in the prototype chain of an object.
-```js
-object instanceof ClassName;
-// return a boolean</li>
+<li>This operator actually tests whether the constructor appears in the prototype chain of an object.</li>
 </ul>
-<p>typeof object
-// &quot;object&quot;</p>
-<pre><code>
-## `this` in objects
-- A value for `this` is set when a method is invoked on an object, and that value refers to that object.
-- Four ways to call functions
-  - Calling a constructor function with the `new` keyword sets `this` to a newly-created object.
-  - Calling a method sets `this` to the object that owns the method.
-  - Calling a function on its own (i.e. invoking a regular function) sets `this` to `window`.
-  - Calling a function with `call` or `apply` allow customization of `this`.
+<pre><code class="lang-js">object <span class="hljs-keyword">instanceof</span> ClassName;
+<span class="hljs-comment">// return a boolean</span>
 
-## `call()`
-- Set `this` to custom objects.
-```js
-// this variable is set to thisObject in the invocation
-function.call(thisObject, arguments)
-</code></pre><ul>
-<li>Invoke functions attached to objects (i.e. methods).
-<code>``js
-const mockingbird = {
-title: &apos;To Kill a Mockingbird&apos;,
-describe: function () {
-  console.log(</code>${this.title} is a classic novel`);
-}
-};</li>
-</ul>
-<p>const pride = {
-  title: &apos;Pride and Prejudice&apos;
-};</p>
-<p>mockingbird.describe.call(pride);
-// &apos;Pride and Prejudice is a classic novel&apos;</p>
-<pre><code>
-## `apply()`
-- Pass in arguments in an array.
-- Useful when the number of arguments is unknown.
-```js
-function.apply(thisObject, [arguments])
-</code></pre><h2 id="bind"><a name="bind" class="plugin-anchor" href="#bind"><i class="fa fa-link" aria-hidden="true"></i></a><code>bind()</code></h2>
+<span class="hljs-keyword">typeof</span> object
+<span class="hljs-comment">// &quot;object&quot;</span>
+</code></pre>
+<h2 id="this-in-objects"><a name="this-in-objects" class="plugin-anchor" href="#this-in-objects"><i class="fa fa-link" aria-hidden="true"></i></a><code>this</code> in objects</h2>
 <ul>
-<li>When methods are passed in as a callback, <code>this</code> reference may be lost.
-```js
-function invokeTwice(cb) {
- cb();
- cb();
-}</li>
+<li>A value for <code>this</code> is set when a method is invoked on an object, and that value refers to that object.</li>
+<li>Four ways to call functions<ul>
+<li>Calling a constructor function with the <code>new</code> keyword sets <code>this</code> to a newly-created object.</li>
+<li>Calling a method sets <code>this</code> to the object that owns the method.</li>
+<li>Calling a function on its own (i.e. invoking a regular function) sets <code>this</code> to <code>window</code>.</li>
+<li>Calling a function with <code>call</code> or <code>apply</code> allow customization of <code>this</code>.</li>
 </ul>
-<p>const dog = {
-  age: 5,
-  growOneYear: function () {
-    this.age += 1;
+</li>
+</ul>
+<h2 id="call"><a name="call" class="plugin-anchor" href="#call"><i class="fa fa-link" aria-hidden="true"></i></a><code>call()</code></h2>
+<ul>
+<li>Set <code>this</code> to custom objects.</li>
+</ul>
+<pre><code class="lang-js"><span class="hljs-comment">// this variable is set to thisObject in the invocation</span>
+<span class="hljs-function"><span class="hljs-keyword">function</span>.<span class="hljs-title">call</span>(<span class="hljs-params">thisObject, arguments</span>)
+</span></code></pre>
+<ul>
+<li>Invoke functions attached to objects (i.e. methods).</li>
+</ul>
+<pre><code class="lang-js"><span class="hljs-keyword">const</span> mockingbird = {
+  title: <span class="hljs-string">&apos;To Kill a Mockingbird&apos;</span>,
+  describe: <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">`<span class="hljs-subst">${this.title}</span> is a classic novel`</span>);
   }
-};</p>
-<p>// growOneYear is passed in as a function, so
-// this inside growOneYear is set to windows,
-// and the age is not updated
-invokeTwice(dog.growOneYear);</p>
-<p>dog.age;
-// 5</p>
-<pre><code>
-- Use anonymous closure to close over the `dog` object.
-```js
-invokeTwice(function () {
-  // growOneYear is directly call onto the dog object
+};
+
+<span class="hljs-keyword">const</span> pride = {
+  title: <span class="hljs-string">&apos;Pride and Prejudice&apos;</span>
+};
+
+mockingbird.describe.call(pride);
+<span class="hljs-comment">// &apos;Pride and Prejudice is a classic novel&apos;</span>
+</code></pre>
+<h2 id="apply"><a name="apply" class="plugin-anchor" href="#apply"><i class="fa fa-link" aria-hidden="true"></i></a><code>apply()</code></h2>
+<ul>
+<li>Pass in arguments in an array.</li>
+<li>Useful when the number of arguments is unknown.</li>
+</ul>
+<pre><code class="lang-js"><span class="hljs-function"><span class="hljs-keyword">function</span>.<span class="hljs-title">apply</span>(<span class="hljs-params">thisObject, [arguments]</span>)
+</span></code></pre>
+<h2 id="bind"><a name="bind" class="plugin-anchor" href="#bind"><i class="fa fa-link" aria-hidden="true"></i></a><code>bind()</code></h2>
+<ul>
+<li>When methods are passed in as a callback, <code>this</code> reference may be lost.</li>
+</ul>
+<pre><code class="lang-js"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">invokeTwice</span>(<span class="hljs-params">cb</span>) </span>{
+   cb();
+   cb();
+}
+
+<span class="hljs-keyword">const</span> dog = {
+  age: <span class="hljs-number">5</span>,
+  growOneYear: <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
+    <span class="hljs-keyword">this</span>.age += <span class="hljs-number">1</span>;
+  }
+};
+
+<span class="hljs-comment">// growOneYear is passed in as a function, so</span>
+<span class="hljs-comment">// this inside growOneYear is set to windows,</span>
+<span class="hljs-comment">// and the age is not updated</span>
+invokeTwice(dog.growOneYear);
+
+dog.age;
+<span class="hljs-comment">// 5</span>
+</code></pre>
+<ul>
+<li>Use anonymous closure to close over the <code>dog</code> object.</li>
+</ul>
+<pre><code class="lang-js">invokeTwice(<span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
+  <span class="hljs-comment">// growOneYear is directly call onto the dog object</span>
   dog.growOneYear();
 });
 
 dog.age;
-// 7
-</code></pre><ul>
+<span class="hljs-comment">// 7</span>
+</code></pre>
+<ul>
 <li><code>bind()</code> method provides an less verbose alternative approach.</li>
-<li>It is called onto a function and returns a copy of that function with a specified this value.<pre><code class="lang-js"><span class="hljs-keyword">const</span> growOneYearMethod = dog.growOneYear.bind(dog);
+<li>It is called onto a function and returns a copy of that function with a specified this value.</li>
+</ul>
+<pre><code class="lang-js"><span class="hljs-keyword">const</span> growOneYearMethod = dog.growOneYear.bind(dog);
 invokeTwice(growOneYearMethod);
 dog.age;
 <span class="hljs-comment">// 7</span>
 </code></pre>
-</li>
-</ul>
 <h2 id="prototype"><a name="prototype" class="plugin-anchor" href="#prototype"><i class="fa fa-link" aria-hidden="true"></i></a><code>prototype</code></h2>
 <ul>
 <li>Each function has a <code>prototype</code> property. <code>prototype</code> is an object.</li>
@@ -526,13 +540,13 @@ cat2.isHungry;
 </ul>
 <h2 id="proto"><a name="proto" class="plugin-anchor" href="#proto"><i class="fa fa-link" aria-hidden="true"></i></a><code>__proto__</code></h2>
 <ul>
-<li><p>An object is secretly linked to its constructor function&apos;s <code>prototype</code> object through that instance&apos;s <code>__proto__</code> property.</p>
+<li>An object is secretly linked to its constructor function&apos;s <code>prototype</code> object through that instance&apos;s <code>__proto__</code> property.</li>
+</ul>
 <pre><code class="lang-js">object.__proto__ === object.constructor.prototype;
 <span class="hljs-comment">// true</span>
 </code></pre>
-</li>
-<li><p>It is highly discouraged to reassign the <code>__proto__</code> property, or even use it in any written code.</p>
 <ul>
+<li>It is highly discouraged to reassign the <code>__proto__</code> property, or even use it in any written code.<ul>
 <li>There are compatibility issues across browsers.</li>
 <li>Since the JavaScript engine searches and accesses properties along the prototype chain, mutating an object&apos;s prototype can lead to performance issues.</li>
 </ul>
@@ -552,53 +566,60 @@ Child.prototype = Parent.prototype
 <ul>
 <li>Use <code>Object.create()</code> to manage inheritance without altering the prototype.</li>
 <li>This method takes in a single object as an argument, and returns a new object with its <code>__proto__</code> property set to the argument passed into it.</li>
-<li><p>Objects created with this method extend from the passed in argument.</p>
+<li>Objects created with this method extend from the passed in argument.</li>
+</ul>
 <pre><code class="lang-js"><span class="hljs-keyword">const</span> mammal = {
-vertebrate: <span class="hljs-literal">true</span>,
-earBones: <span class="hljs-number">3</span>
+  vertebrate: <span class="hljs-literal">true</span>,
+  earBones: <span class="hljs-number">3</span>
 };
 <span class="hljs-comment">// rabbit extends mammal</span>
 <span class="hljs-keyword">const</span> rabbit = <span class="hljs-built_in">Object</span>.create(mammal);
 <span class="hljs-built_in">console</span>.log(rabbit.__proto__ === mammal);
 <span class="hljs-comment">// true</span>
 </code></pre>
-</li>
-<li><p>Create inheritance
-```js
-function Animal (name) {
-this.name = name;
-}</p>
-</li>
+<ul>
+<li>Create inheritance</li>
 </ul>
-<p>Animal.prototype.walk = function () {
-  console.log(<code>${this.name} walks!</code>);
-};</p>
-<p>function Cat (name) {
-  // call super constructor; use call
-  // instead of new operator so that
-  // no Animal object is created
-  Animal.call(this, name);
-  this.lives = 9;
-}</p>
-<p>Cat.prototype.constructor === Cat
-// true</p>
-<p>// link Cat.prototype.<strong>proto</strong> to Animal.prototype
-Cat.prototype = Object.create(Animal.prototype);</p>
-<p>// now Cat prototype&apos;s constructor is set to Animal
-// <a href="https://stackoverflow.com/a/20830553" target="_blank">https://stackoverflow.com/a/20830553</a>
+<pre><code class="lang-js"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">Animal</span> (<span class="hljs-params">name</span>) </span>{
+  <span class="hljs-keyword">this</span>.name = name;
+}
+
+Animal.prototype.walk = <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
+  <span class="hljs-built_in">console</span>.log(<span class="hljs-string">`<span class="hljs-subst">${this.name}</span> walks!`</span>);
+};
+
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">Cat</span> (<span class="hljs-params">name</span>) </span>{
+  <span class="hljs-comment">// call super constructor; use call</span>
+  <span class="hljs-comment">// instead of new operator so that</span>
+  <span class="hljs-comment">// no Animal object is created</span>
+  Animal.call(<span class="hljs-keyword">this</span>, name);
+  <span class="hljs-keyword">this</span>.lives = <span class="hljs-number">9</span>;
+}
+
+Cat.prototype.constructor === Cat
+<span class="hljs-comment">// true</span>
+
+<span class="hljs-comment">// link Cat.prototype.__proto__ to Animal.prototype</span>
+Cat.prototype = <span class="hljs-built_in">Object</span>.create(Animal.prototype);
+
+<span class="hljs-comment">// now Cat prototype&apos;s constructor is set to Animal</span>
+<span class="hljs-comment">// https://stackoverflow.com/a/20830553</span>
 Cat.prototype.constructor
-// Animal</p>
-<p>// so its constructor needs to be changed back
-Cat.prototype.constructor = Cat;</p>
-<p>// add a method only shared by Cat objects
-Cat.prototype.meow = function () {
-  console.log(&apos;Meow!&apos;);
-};</p>
-<p>const bambi = new Cat(&apos;Bambi&apos;);
+<span class="hljs-comment">// Animal</span>
+
+<span class="hljs-comment">// so its constructor needs to be changed back</span>
+Cat.prototype.constructor = Cat;
+
+<span class="hljs-comment">// add a method only shared by Cat objects</span>
+Cat.prototype.meow = <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
+  <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;Meow!&apos;</span>);
+};
+
+<span class="hljs-keyword">const</span> bambi = <span class="hljs-keyword">new</span> Cat(<span class="hljs-string">&apos;Bambi&apos;</span>);
 bambi.meow();
 bambi.walk();
 bambi.name;
-```</p>
+</code></pre>
 
                                 
                                 </section>
@@ -642,7 +663,7 @@ bambi.name;
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Classes and objects","level":"1.3.3","depth":2,"next":{"title":"Object-oriented design patterns","level":"1.3.4","depth":2,"path":"object-oriented-javascript/04-object-oriented-design-patterns.md","ref":"object-oriented-javascript/04-object-oriented-design-patterns.md","articles":[]},"previous":{"title":"Functions at runtime","level":"1.3.2","depth":2,"path":"object-oriented-javascript/02-functions-at-runtime.md","ref":"object-oriented-javascript/02-functions-at-runtime.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["-sharing","github","anchors","splitter"],"pluginsConfig":{"github":{"url":"https://github.com/tuliren/javascript-notes"},"anchors":{},"splitter":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"object-oriented-javascript/03-classes-and-objects.md","mtime":"2019-05-26T20:36:56.524Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-05-26T20:42:51.445Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Classes and objects","level":"1.3.3","depth":2,"next":{"title":"Object-oriented design patterns","level":"1.3.4","depth":2,"path":"object-oriented-javascript/04-object-oriented-design-patterns.md","ref":"object-oriented-javascript/04-object-oriented-design-patterns.md","articles":[]},"previous":{"title":"Functions at runtime","level":"1.3.2","depth":2,"path":"object-oriented-javascript/02-functions-at-runtime.md","ref":"object-oriented-javascript/02-functions-at-runtime.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["-sharing","github","anchors","splitter"],"pluginsConfig":{"github":{"url":"https://github.com/tuliren/javascript-notes"},"anchors":{},"splitter":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"object-oriented-javascript/03-classes-and-objects.md","mtime":"2019-05-26T20:46:49.679Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-05-26T20:48:27.103Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
