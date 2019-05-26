@@ -1,0 +1,621 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Functions at runtime · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-anchors/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="03-classes-and-objects.html" />
+    
+    
+    <link rel="prev" href="01-objects-in-depth.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Contents
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" >
+            
+                <span>
+            
+                    
+                    Intro to JavaScript
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../intro-to-javascript/01-javascript.html">
+            
+                <a href="../intro-to-javascript/01-javascript.html">
+            
+                    
+                    Overview
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../intro-to-javascript/02-data-types.html">
+            
+                <a href="../intro-to-javascript/02-data-types.html">
+            
+                    
+                    Data types
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../intro-to-javascript/03-conditionals.html">
+            
+                <a href="../intro-to-javascript/03-conditionals.html">
+            
+                    
+                    Conditionals
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="../intro-to-javascript/04-loops.html">
+            
+                <a href="../intro-to-javascript/04-loops.html">
+            
+                    
+                    Loops
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="../intro-to-javascript/05-functions.html">
+            
+                <a href="../intro-to-javascript/05-functions.html">
+            
+                    
+                    Functions
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6" data-path="../intro-to-javascript/06-arrays.html">
+            
+                <a href="../intro-to-javascript/06-arrays.html">
+            
+                    
+                    Arrays
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.7" data-path="../intro-to-javascript/07-objects.html">
+            
+                <a href="../intro-to-javascript/07-objects.html">
+            
+                    
+                    Objects
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" >
+            
+                <span>
+            
+                    
+                    Object-Oriented JavaScript
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="01-objects-in-depth.html">
+            
+                <a href="01-objects-in-depth.html">
+            
+                    
+                    Objects in depth
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.3.2" data-path="02-functions-at-runtime.html">
+            
+                <a href="02-functions-at-runtime.html">
+            
+                    
+                    Functions at runtime
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="03-classes-and-objects.html">
+            
+                <a href="03-classes-and-objects.html">
+            
+                    
+                    Classes and objects
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="04-object-oriented-design-patterns.html">
+            
+                <a href="04-object-oriented-design-patterns.html">
+            
+                    
+                    Object-oriented design patterns
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >Functions at runtime</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="functions-at-runtime"><a name="functions-at-runtime" class="plugin-anchor" href="#functions-at-runtime"><i class="fa fa-link" aria-hidden="true"></i></a>Functions at Runtime</h1>
+<h2 id="functions-are-first-class-functions"><a name="functions-are-first-class-functions" class="plugin-anchor" href="#functions-are-first-class-functions"><i class="fa fa-link" aria-hidden="true"></i></a>Functions are first-class functions</h2>
+<ul>
+<li>Functions can:<ul>
+<li>be stored in variables</li>
+<li>be returned from a function</li>
+<li>be passed as arguments into another function</li>
+</ul>
+</li>
+<li>A function that takes other functions as arguments (and/or returns a function) is known as a <em>higher-order function</em>.</li>
+<li>A function that is passed as an argument into another function is called a <em>callback function</em>.</li>
+</ul>
+<h2 id="scope"><a name="scope" class="plugin-anchor" href="#scope"><i class="fa fa-link" aria-hidden="true"></i></a>Scope</h2>
+<ul>
+<li>Functions have access to:<ul>
+<li>The function&apos;s arguments</li>
+<li>Local variables declared within the function</li>
+<li>Variables from its parent function&apos;s scope</li>
+<li>Global variables</li>
+</ul>
+</li>
+<li>JavaScript is <strong>function-scoped</strong><ul>
+<li>Variables in JavaScript are traditionally defined in the scope of a function, rather than in the scope of a block.</li>
+<li>Any variables defined inside that function are not available outside of that function, since entering a function will change scope.</li>
+<li>Any variables defined inside a block (e.g. within an <code>if</code> statement) are available outside of that block.</li>
+</ul>
+</li>
+<li>ES6 syntax allows for <strong>block-scoped</strong> variables with <code>let</code> and <code>const</code>.<ul>
+<li>These keywords are used to declare block-scoped variables in JavaScript.</li>
+<li>They largely replace the need for <code>var</code>.</li>
+</ul>
+</li>
+<li>Scope chain: JavaScript interpreter will search the value of a variable in the following order:<ul>
+<li>Local variables</li>
+<li>Parent function&apos;s variables</li>
+<li>Parent function&apos;s parent function&apos;s variables</li>
+<li>Global variables</li>
+</ul>
+</li>
+</ul>
+<h2 id="variable-shadowing"><a name="variable-shadowing" class="plugin-anchor" href="#variable-shadowing"><i class="fa fa-link" aria-hidden="true"></i></a>Variable shadowing</h2>
+<ul>
+<li>When a variable has the same name as another variable somewhere in the scope chain, the variable with local scope will temporarily &quot;shawow&quot; the variable in the outer scope.</li>
+</ul>
+<h2 id="closure"><a name="closure" class="plugin-anchor" href="#closure"><i class="fa fa-link" aria-hidden="true"></i></a>Closure</h2>
+<ul>
+<li>Closure<ul>
+<li>The function itself</li>
+<li>The scope chain of the code where the function is declared</li>
+</ul>
+</li>
+<li>It is the process of a function retaining access to its scope.</li>
+<li>Formal definition: the combaination of a function and the lexical environment within which that function.<ul>
+<li>Lexical environment<ul>
+<li>The association of Identifiers to specific variables and functions based upon the lexical nesting structure of ECMAScript code.</li>
+<li>I.e. the code as it is written in the JavaScript file</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="creating-a-closure"><a name="creating-a-closure" class="plugin-anchor" href="#creating-a-closure"><i class="fa fa-link" aria-hidden="true"></i></a>Creating a closure</h2>
+<ul>
+<li>Every time a function is defined, closure is created for that function.</li>
+<li>Every function has closure.</li>
+<li>Functions close over at least one other context along the scope chain: the global scope.</li>
+<li>Recall that a nested function has access to variables outside of it. These nested functions close over (i.e. capture) variables that aren&apos;t passed in as arguments nor defined locally.</li>
+</ul>
+<pre><code class="lang-js"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">remember</span>(<span class="hljs-params">number</span>) </span>{
+  <span class="hljs-comment">// the returned function retains the</span>
+  <span class="hljs-comment">// scope chain of its parent function</span>
+  <span class="hljs-keyword">return</span> <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+    <span class="hljs-keyword">return</span> number;
+  }
+}
+<span class="hljs-keyword">const</span> returnedFunction = remember(<span class="hljs-number">5</span>);
+<span class="hljs-built_in">console</span>.log( returnedFunction() );
+<span class="hljs-comment">// 5</span>
+</code></pre>
+<h2 id="garbage-collection"><a name="garbage-collection" class="plugin-anchor" href="#garbage-collection"><i class="fa fa-link" aria-hidden="true"></i></a>Garbage collection</h2>
+<ul>
+<li>JavaScript manages memory with automatic garbage collection.</li>
+<li>If the nested function captures and uses its parent&apos;s variables (or variables along the scope chain), those variables will stay in memory as long as the functions that utilize them can still be referenced.</li>
+</ul>
+<h2 id="function-declarations-vs-expressions"><a name="function-declarations-vs-expressions" class="plugin-anchor" href="#function-declarations-vs-expressions"><i class="fa fa-link" aria-hidden="true"></i></a>Function declarations vs. expressions</h2>
+<ul>
+<li><p>Function declaration</p>
+<ul>
+<li>Defines a function</li>
+<li>Does <em>not</em> require a variable to be assigned to it</li>
+<li>Does <em>not</em> return a value<pre><code class="lang-js"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">returnHello</span>(<span class="hljs-params"></span>) </span>{
+<span class="hljs-keyword">return</span> <span class="hljs-string">&apos;Hello!&apos;</span>;
+}
+</code></pre>
+</li>
+</ul>
+</li>
+<li><p>Function expression</p>
+<ul>
+<li>Does return a value</li>
+<li>Can be anonymous or named</li>
+<li>Part of another expression&apos;s syntax</li>
+<li>Commonly assigned to variables
+```js
+// anonymous
+const myFunction = function () {
+return &apos;Hello!&apos;;
+};</li>
+</ul>
+</li>
+</ul>
+<p>// named
+const myFunction = function returnHello() {
+  return &apos;Hello!&apos;;
+};</p>
+<pre><code>
+## Immediately-invoked function expressions (IIFE)
+- A function that is called immediately after it is defined.
+
+```js
+(function [name](parameters){
+  // function body
+})(arguments);
+
+(function [name](parameters){
+  // function body
+}(arguments));
+
+// anonymous
+(function() {
+  alert(&apos;Hi!&apos;);
+})();
+
+// named
+(function sayHi() {
+  alert(&apos;Hi!&apos;);
+})();
+</code></pre><h2 id="private-scope"><a name="private-scope" class="plugin-anchor" href="#private-scope"><i class="fa fa-link" aria-hidden="true"></i></a>Private scope</h2>
+<ul>
+<li>One of the primary uses for IIFE is to create private scope (i.e., private state).</li>
+</ul>
+<pre><code class="lang-js"><span class="hljs-comment">// immediately-invoked function expression</span>
+<span class="hljs-keyword">const</span> myFunction = (
+  <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
+    <span class="hljs-comment">// variable available for the returned function</span>
+    <span class="hljs-keyword">const</span> hi = <span class="hljs-string">&apos;Hi!&apos;</span>;
+    <span class="hljs-keyword">return</span> <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
+      <span class="hljs-built_in">console</span>.log(hi);
+    }
+  }
+)();
+</code></pre>
+<ul>
+<li>The returned anonymous function closes over (i.e. captures) the <code>hi</code> variable. This allows <code>myFunction</code> to maintain a private, mutable state that cannot be accessed outside the function.</li>
+<li>Because the function expressed is called immediately, the IIFE wraps up the code nicely so that it won&apos;t pollute the global scope.</li>
+<li>IIFE is best for one-time task without polluting the global environment with extra variables.</li>
+</ul>
+<h2 id="iife-example"><a name="iife-example" class="plugin-anchor" href="#iife-example"><i class="fa fa-link" aria-hidden="true"></i></a>IIFE example</h2>
+<ul>
+<li>Create a button that alerts the user on every other click.</li>
+<li>One way is to keep track of the number of clicks of the button with a global variable.</li>
+<li>The better way is to enclose the data in the event handler itself.</li>
+</ul>
+<pre><code class="lang-html"><span class="hljs-comment">&lt;!-- button.html --&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">html</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">body</span>&gt;</span>
+     <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&apos;button&apos;</span>&gt;</span>Click me!<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+     <span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string">&apos;button.js&apos;</span>&gt;</span><span class="undefined"></span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">body</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">html</span>&gt;</span>
+</code></pre>
+<pre><code class="lang-js"><span class="hljs-comment">// button.js</span>
+<span class="hljs-keyword">const</span> button = <span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">&apos;button&apos;</span>);
+
+<span class="hljs-comment">// the function creates a closure to protect the count</span>
+<span class="hljs-comment">// variable from being accesses externally</span>
+button.addEventListener(<span class="hljs-string">&apos;click&apos;</span>, (<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+  <span class="hljs-keyword">let</span> count = <span class="hljs-number">0</span>;
+  <span class="hljs-comment">// the returned function closes on the count variable</span>
+  <span class="hljs-keyword">return</span> <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+    count += <span class="hljs-number">1</span>;
+    <span class="hljs-keyword">if</span> (count === <span class="hljs-number">2</span>) {
+      alert(<span class="hljs-string">&apos;This alert appears every other press!&apos;</span>);
+      count = <span class="hljs-number">0</span>;
+    }
+  };
+})());
+</code></pre>
+<ul>
+<li>The first function creates a closure to<ul>
+<li>Define the <code>count</code> variable</li>
+<li>Protect the variable from being accesses externally</li>
+</ul>
+</li>
+<li>The second returned anonymous function creates a closure to<ul>
+<li>Access and modify the <code>count</code> variable</li>
+</ul>
+</li>
+</ul>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="01-objects-in-depth.html" class="navigation navigation-prev " aria-label="Previous page: Objects in depth">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="03-classes-and-objects.html" class="navigation navigation-next " aria-label="Next page: Classes and objects">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Functions at runtime","level":"1.3.2","depth":2,"next":{"title":"Classes and objects","level":"1.3.3","depth":2,"path":"object-oriented-javascript/03-classes-and-objects.md","ref":"object-oriented-javascript/03-classes-and-objects.md","articles":[]},"previous":{"title":"Objects in depth","level":"1.3.1","depth":2,"path":"object-oriented-javascript/01-objects-in-depth.md","ref":"object-oriented-javascript/01-objects-in-depth.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["-sharing","github","anchors","splitter"],"pluginsConfig":{"github":{"url":"https://github.com/tuliren/javascript-notes"},"anchors":{},"splitter":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"object-oriented-javascript/02-functions-at-runtime.md","mtime":"2019-05-26T20:36:56.524Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-05-26T20:42:51.445Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-github/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

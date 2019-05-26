@@ -1,0 +1,603 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Object-oriented design patterns · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-anchors/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    
+    <link rel="prev" href="03-classes-and-objects.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Contents
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" >
+            
+                <span>
+            
+                    
+                    Intro to JavaScript
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../intro-to-javascript/01-javascript.html">
+            
+                <a href="../intro-to-javascript/01-javascript.html">
+            
+                    
+                    Overview
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../intro-to-javascript/02-data-types.html">
+            
+                <a href="../intro-to-javascript/02-data-types.html">
+            
+                    
+                    Data types
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../intro-to-javascript/03-conditionals.html">
+            
+                <a href="../intro-to-javascript/03-conditionals.html">
+            
+                    
+                    Conditionals
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="../intro-to-javascript/04-loops.html">
+            
+                <a href="../intro-to-javascript/04-loops.html">
+            
+                    
+                    Loops
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="../intro-to-javascript/05-functions.html">
+            
+                <a href="../intro-to-javascript/05-functions.html">
+            
+                    
+                    Functions
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6" data-path="../intro-to-javascript/06-arrays.html">
+            
+                <a href="../intro-to-javascript/06-arrays.html">
+            
+                    
+                    Arrays
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.7" data-path="../intro-to-javascript/07-objects.html">
+            
+                <a href="../intro-to-javascript/07-objects.html">
+            
+                    
+                    Objects
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" >
+            
+                <span>
+            
+                    
+                    Object-Oriented JavaScript
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="01-objects-in-depth.html">
+            
+                <a href="01-objects-in-depth.html">
+            
+                    
+                    Objects in depth
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="02-functions-at-runtime.html">
+            
+                <a href="02-functions-at-runtime.html">
+            
+                    
+                    Functions at runtime
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="03-classes-and-objects.html">
+            
+                <a href="03-classes-and-objects.html">
+            
+                    
+                    Classes and objects
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.3.4" data-path="04-object-oriented-design-patterns.html">
+            
+                <a href="04-object-oriented-design-patterns.html">
+            
+                    
+                    Object-oriented design patterns
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >Object-oriented design patterns</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="object-oriented-design-patterns"><a name="object-oriented-design-patterns" class="plugin-anchor" href="#object-oriented-design-patterns"><i class="fa fa-link" aria-hidden="true"></i></a>Object-Oriented Design Patterns</h1>
+<h2 id="single-inheritance"><a name="single-inheritance" class="plugin-anchor" href="#single-inheritance"><i class="fa fa-link" aria-hidden="true"></i></a>Single inheritance</h2>
+<ul>
+<li>An object&apos;s <code>.prototype</code> property points to just one object.</li>
+<li>This is because JavaScript only supports single inheritance.</li>
+</ul>
+<h2 id="factory-functions"><a name="factory-functions" class="plugin-anchor" href="#factory-functions"><i class="fa fa-link" aria-hidden="true"></i></a>Factory Functions</h2>
+<ul>
+<li>A factory function is a function that returns an object, but isn&apos;t itself a class or constructor.</li>
+<li>We can invoke a factory function as a normal function without using the <code>new</code> operator to avoid the complexity of classes and constructors.</li>
+</ul>
+<pre><code class="lang-js"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">Basketball</span>(<span class="hljs-params">color</span>) </span>{
+  <span class="hljs-keyword">return</span> {
+    color: color,
+    numDots: <span class="hljs-number">35000</span>
+  };
+}
+<span class="hljs-keyword">const</span> orangeBasketball = Basketball(<span class="hljs-string">&apos;orange&apos;</span>);
+<span class="hljs-built_in">console</span>.log(orangeBasketball);
+<span class="hljs-comment">// { color: &apos;orange&apos;, numDots: 35000 }</span>
+</code></pre>
+<table>
+<thead>
+<tr>
+<th>Category</th>
+<th>Factory Function</th>
+<th>Constructor Function</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Can create new object each time</td>
+<td>Yes</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>Can receive arguments</td>
+<td>Yes</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>Implicate prototypal inheritance</td>
+<td>No</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>Invocation</td>
+<td>Normal function<br><code>factoryFunc()</code></td>
+<td>With the <code>new</code> operator<br><code>new ConstructorFunc()</code> </td>
+</tr>
+</tbody>
+</table>
+<h2 id="mixins"><a name="mixins" class="plugin-anchor" href="#mixins"><i class="fa fa-link" aria-hidden="true"></i></a>Mixins</h2>
+<ul>
+<li>A mixin is a technique that takes the properties and methods from one object and copies them over to another object.</li>
+<li>Mixin is not meant to be added to the prototype chain.</li>
+</ul>
+<h3 id="objectassign"><a name="objectassign" class="plugin-anchor" href="#objectassign"><i class="fa fa-link" aria-hidden="true"></i></a><code>Object.assign()</code></h3>
+<ul>
+<li><code>Object.assign()</code> is a method that (shallow) copies an object&apos;s own (non-inherited) properties from one or more source objects into a target object, then returns the updated target object.</li>
+<li><code>Object.assign()</code> does not create and return a new object. It directly modifies then returns the same target object that was passed in.</li>
+<li>Values of existing properties will be overwritten.</li>
+<li>This method is introduced in ES2015 (ES6).</li>
+</ul>
+<pre><code class="lang-js">target = <span class="hljs-built_in">Object</span>.assign(target, source1, source2, ...);
+</code></pre>
+<h3 id="functional-mixins"><a name="functional-mixins" class="plugin-anchor" href="#functional-mixins"><i class="fa fa-link" aria-hidden="true"></i></a>Functional Mixins</h3>
+<ul>
+<li>A functional mixin is a composable factory function that receives a mixin as an argument, copies properties and methods from that mixin, and returns a new object.</li>
+<li>Functional mixins are composable. We can use them as individual pieces of code that add specific properties like an assembly line.</li>
+</ul>
+<pre><code class="lang-js"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">CoffeeMaker</span>(<span class="hljs-params">object</span>) </span>{
+  <span class="hljs-keyword">let</span> needsRefill = <span class="hljs-literal">false</span>;
+
+  <span class="hljs-keyword">return</span> <span class="hljs-built_in">Object</span>.assign({}, object, {
+    pourAll: <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
+      needsRefill = <span class="hljs-literal">true</span>;
+    },
+    isEmpty: <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
+      <span class="hljs-keyword">return</span> needsRefill;
+    }
+  });
+}
+
+<span class="hljs-keyword">const</span> mixedCoffeeMaker = CoffeeMaker({ style: <span class="hljs-string">&apos;percolator&apos;</span> });
+
+<span class="hljs-comment">// mixedCoffeeMaker is equivalent to</span>
+{
+  style: <span class="hljs-string">&apos;percolator&apos;</span>,
+  pourAll: <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
+    needsRefill = <span class="hljs-literal">true</span>;
+  },
+  isEmpty: <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
+    <span class="hljs-keyword">return</span> needsRefill;
+  }
+}
+</code></pre>
+<h2 id="private-properties"><a name="private-properties" class="plugin-anchor" href="#private-properties"><i class="fa fa-link" aria-hidden="true"></i></a>Private Properties</h2>
+<ul>
+<li>JavaScript has no concept of private properties out-of-the-box. There is no special syntax or keyword we can use to protect certain properties from being accessed.</li>
+<li>Some object properties and method names may be prefixed with an underscore (<code>_</code>). It They are private by convention only.</li>
+<li><p>we can use scope and closures to create a private state.
+```js
+function myCounter() {
+let count = 0;</p>
+<p>return function () {
+  count += 1;
+  return count;
+};
+}</p>
+</li>
+</ul>
+<p>let counter = myCounter();</p>
+<p>counter();
+// 1</p>
+<p>counter();
+// 2</p>
+<pre><code>
+## Module Pattern
+- Use function scope, closure, and IIFE.
+```js
+let moduleVar = (function () {
+  return {
+    // privatr variable
+    let privateVar = &apos;private variable&apos;;
+    return {
+      // setter
+      setVar: function (varValue) {
+        privateVar = varValue;
+      }
+      // getter
+      getVar: function () {
+        return privateVar;
+      }
+    }
+  };
+}());
+</code></pre><ul>
+<li>Advantages of module pattern:<ul>
+<li>Private properties</li>
+<li>Usage of IIFE that prevents pollution of global scope</li>
+<li>Code organization</li>
+</ul>
+</li>
+</ul>
+<h2 id="revealing-module-pattern"><a name="revealing-module-pattern" class="plugin-anchor" href="#revealing-module-pattern"><i class="fa fa-link" aria-hidden="true"></i></a>Revealing Module Pattern</h2>
+<ul>
+<li>While we still maintain encapsulation (as in the Module Pattern), we also reveal certain properties (and methods).</li>
+<li>Key ingredients to the Revealing Module Pattern:<ul>
+<li>An IIFE (wrapper)</li>
+<li>The module content (variables, methods, objects, etc.)</li>
+<li>A returned object literal with keys pointing to data to be revealed</li>
+</ul>
+</li>
+</ul>
+<pre><code class="lang-js"><span class="hljs-keyword">let</span> person = (<span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{]
+  <span class="hljs-comment">// private properties</span>
+  <span class="hljs-keyword">let</span> privateAge = <span class="hljs-number">0</span>;
+  <span class="hljs-keyword">let</span> privateName = <span class="hljs-string">&apos;Andrew&apos;</span>;
+  <span class="hljs-comment">// private method</span>
+  <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">privateAgeOneYear</span>(<span class="hljs-params"></span>) </span>{
+    privateAge += <span class="hljs-number">1</span>;
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">`One year has passed! Current age is <span class="hljs-subst">${privateAge}</span>`</span>);
+  }
+  <span class="hljs-comment">// public method</span>
+  <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">publicDisplayName</span>(<span class="hljs-params"></span>) </span>{
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">`Name: <span class="hljs-subst">${privateName}</span>`</span>);
+  }
+  <span class="hljs-comment">// public method</span>
+  <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">publicAgeOneYear</span>(<span class="hljs-params"></span>) </span>{
+    privateAgeOneYear();
+  }
+  <span class="hljs-comment">// object literal</span>
+  <span class="hljs-keyword">return</span> {
+    <span class="hljs-comment">// keys pointing to data to be revealed</span>
+    name: publicDisplayName,
+    age: publicDisplayName
+  };
+})();
+</code></pre>
+<ul>
+<li>Advantages of the revealing module pattern:<ul>
+<li>There is clarity at the end of the module (in the <code>return</code> statement) as to which variables or methods may be accessed publicly.</li>
+<li>It has consistent syntax. In contrast, the normal Module Pattern may contain variables and functions spread throughout the entire function body.</li>
+</ul>
+</li>
+</ul>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="03-classes-and-objects.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: Classes and objects">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Object-oriented design patterns","level":"1.3.4","depth":2,"previous":{"title":"Classes and objects","level":"1.3.3","depth":2,"path":"object-oriented-javascript/03-classes-and-objects.md","ref":"object-oriented-javascript/03-classes-and-objects.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["-sharing","github","anchors","splitter"],"pluginsConfig":{"github":{"url":"https://github.com/tuliren/javascript-notes"},"anchors":{},"splitter":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"object-oriented-javascript/04-object-oriented-design-patterns.md","mtime":"2019-05-26T20:36:56.524Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-05-26T20:42:51.445Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-github/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

@@ -1,0 +1,685 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Classes and objects · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-anchors/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="04-object-oriented-design-patterns.html" />
+    
+    
+    <link rel="prev" href="02-functions-at-runtime.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Contents
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" >
+            
+                <span>
+            
+                    
+                    Intro to JavaScript
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../intro-to-javascript/01-javascript.html">
+            
+                <a href="../intro-to-javascript/01-javascript.html">
+            
+                    
+                    Overview
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../intro-to-javascript/02-data-types.html">
+            
+                <a href="../intro-to-javascript/02-data-types.html">
+            
+                    
+                    Data types
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../intro-to-javascript/03-conditionals.html">
+            
+                <a href="../intro-to-javascript/03-conditionals.html">
+            
+                    
+                    Conditionals
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="../intro-to-javascript/04-loops.html">
+            
+                <a href="../intro-to-javascript/04-loops.html">
+            
+                    
+                    Loops
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="../intro-to-javascript/05-functions.html">
+            
+                <a href="../intro-to-javascript/05-functions.html">
+            
+                    
+                    Functions
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6" data-path="../intro-to-javascript/06-arrays.html">
+            
+                <a href="../intro-to-javascript/06-arrays.html">
+            
+                    
+                    Arrays
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.7" data-path="../intro-to-javascript/07-objects.html">
+            
+                <a href="../intro-to-javascript/07-objects.html">
+            
+                    
+                    Objects
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" >
+            
+                <span>
+            
+                    
+                    Object-Oriented JavaScript
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="01-objects-in-depth.html">
+            
+                <a href="01-objects-in-depth.html">
+            
+                    
+                    Objects in depth
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="02-functions-at-runtime.html">
+            
+                <a href="02-functions-at-runtime.html">
+            
+                    
+                    Functions at runtime
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.3.3" data-path="03-classes-and-objects.html">
+            
+                <a href="03-classes-and-objects.html">
+            
+                    
+                    Classes and objects
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="04-object-oriented-design-patterns.html">
+            
+                <a href="04-object-oriented-design-patterns.html">
+            
+                    
+                    Object-oriented design patterns
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >Classes and objects</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="classes-and-objects"><a name="classes-and-objects" class="plugin-anchor" href="#classes-and-objects"><i class="fa fa-link" aria-hidden="true"></i></a>Classes and objects</h1>
+<h2 id="constructor-function"><a name="constructor-function" class="plugin-anchor" href="#constructor-function"><i class="fa fa-link" aria-hidden="true"></i></a>Constructor function</h2>
+<ul>
+<li>Persist data with the <code>this</code> keyword.</li>
+<li>No explicit return value.</li>
+<li>Can have parameters.<pre><code class="lang-js"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">SoftwareDeveloper</span>(<span class="hljs-params">name</span>) </span>{
+<span class="hljs-keyword">this</span>.favoriteLanguage = <span class="hljs-string">&apos;JavaScript&apos;</span>;
+<span class="hljs-keyword">this</span>.name = name;
+}
+</code></pre>
+</li>
+</ul>
+<h2 id="creating-a-new-object"><a name="creating-a-new-object" class="plugin-anchor" href="#creating-a-new-object"><i class="fa fa-link" aria-hidden="true"></i></a>Creating a new object</h2>
+<ul>
+<li>Use the <code>new</code> operator.<pre><code class="lang-js"><span class="hljs-keyword">let</span> developer = <span class="hljs-keyword">new</span> SoftwareDeveloper(<span class="hljs-string">&apos;David&apos;</span>);
+</code></pre>
+</li>
+<li>When the <code>new</code> operator is not used, no object is created.<ul>
+<li>The function is invoked like a regular function.</li>
+<li>Since there is no return value, the variable will be assigned to <code>undefined</code>.</li>
+</ul>
+</li>
+</ul>
+<h2 id="the-instanceof-operator"><a name="the-instanceof-operator" class="plugin-anchor" href="#the-instanceof-operator"><i class="fa fa-link" aria-hidden="true"></i></a>The <code>instanceof</code> operator</h2>
+<ul>
+<li>This operator confirms whether an object is created by a specific constructor function.</li>
+<li>This operator actually tests whether the constructor appears in the prototype chain of an object.
+```js
+object instanceof ClassName;
+// return a boolean</li>
+</ul>
+<p>typeof object
+// &quot;object&quot;</p>
+<pre><code>
+## `this` in objects
+- A value for `this` is set when a method is invoked on an object, and that value refers to that object.
+- Four ways to call functions
+  - Calling a constructor function with the `new` keyword sets `this` to a newly-created object.
+  - Calling a method sets `this` to the object that owns the method.
+  - Calling a function on its own (i.e. invoking a regular function) sets `this` to `window`.
+  - Calling a function with `call` or `apply` allow customization of `this`.
+
+## `call()`
+- Set `this` to custom objects.
+```js
+// this variable is set to thisObject in the invocation
+function.call(thisObject, arguments)
+</code></pre><ul>
+<li>Invoke functions attached to objects (i.e. methods).
+<code>``js
+const mockingbird = {
+title: &apos;To Kill a Mockingbird&apos;,
+describe: function () {
+  console.log(</code>${this.title} is a classic novel`);
+}
+};</li>
+</ul>
+<p>const pride = {
+  title: &apos;Pride and Prejudice&apos;
+};</p>
+<p>mockingbird.describe.call(pride);
+// &apos;Pride and Prejudice is a classic novel&apos;</p>
+<pre><code>
+## `apply()`
+- Pass in arguments in an array.
+- Useful when the number of arguments is unknown.
+```js
+function.apply(thisObject, [arguments])
+</code></pre><h2 id="bind"><a name="bind" class="plugin-anchor" href="#bind"><i class="fa fa-link" aria-hidden="true"></i></a><code>bind()</code></h2>
+<ul>
+<li>When methods are passed in as a callback, <code>this</code> reference may be lost.
+```js
+function invokeTwice(cb) {
+ cb();
+ cb();
+}</li>
+</ul>
+<p>const dog = {
+  age: 5,
+  growOneYear: function () {
+    this.age += 1;
+  }
+};</p>
+<p>// growOneYear is passed in as a function, so
+// this inside growOneYear is set to windows,
+// and the age is not updated
+invokeTwice(dog.growOneYear);</p>
+<p>dog.age;
+// 5</p>
+<pre><code>
+- Use anonymous closure to close over the `dog` object.
+```js
+invokeTwice(function () {
+  // growOneYear is directly call onto the dog object
+  dog.growOneYear();
+});
+
+dog.age;
+// 7
+</code></pre><ul>
+<li><code>bind()</code> method provides an less verbose alternative approach.</li>
+<li>It is called onto a function and returns a copy of that function with a specified this value.<pre><code class="lang-js"><span class="hljs-keyword">const</span> growOneYearMethod = dog.growOneYear.bind(dog);
+invokeTwice(growOneYearMethod);
+dog.age;
+<span class="hljs-comment">// 7</span>
+</code></pre>
+</li>
+</ul>
+<h2 id="prototype"><a name="prototype" class="plugin-anchor" href="#prototype"><i class="fa fa-link" aria-hidden="true"></i></a><code>prototype</code></h2>
+<ul>
+<li>Each function has a <code>prototype</code> property. <code>prototype</code> is an object.</li>
+<li>An object created by the <code>new</code> operator of a constructor function is linked to its constructor&apos;s <code>prototype</code>.</li>
+<li>This link allows the object to access the <code>prototype</code>&apos;s properties and methods as if it were its own.</li>
+<li>Whether accessing a property or invoking a method, the JavaScript interpreter looks for them along the prototype chain in this order:<ul>
+<li>The object&apos;s own properties.</li>
+<li>The object&apos;s constructor&apos;s <code>prototype</code>.</li>
+<li>At the very end of the chain is the <code>Object()</code> object, or the top-level parent.</li>
+<li>If the property still cannot be found, the property is <code>undefined</code>.</li>
+</ul>
+</li>
+<li>By adding methods to the <code>prototype</code>, memory is saved as more objects are instantiated.</li>
+</ul>
+<pre><code class="lang-js"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">Dalmatian</span> (<span class="hljs-params">name</span>) </span>{
+  <span class="hljs-keyword">this</span>.name = name;
+}
+
+<span class="hljs-comment">// register a method on the prototype</span>
+Dalmatian.prototype.bark = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+  <span class="hljs-built_in">console</span>.log(<span class="hljs-string">`<span class="hljs-subst">${this.name}</span> barks!`</span>);
+};
+</code></pre>
+<ul>
+<li>When new methods are added to <code>prototype</code>, existing objects can access the new methods as well.</li>
+<li>When <code>proprotype</code> is replaced, objects created before the replacement are still linked to the old <code>prototype</code>. Objects created after the replacement are linked to the new <code>prototype</code>.</li>
+</ul>
+<pre><code class="lang-js"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">Cat</span>(<span class="hljs-params"></span>) </span>{
+  <span class="hljs-keyword">this</span>.color = <span class="hljs-string">&apos;white&apos;</span>;
+}
+
+<span class="hljs-keyword">let</span> cat1 = <span class="hljs-keyword">new</span> Cat();
+cat1.color;
+<span class="hljs-comment">// white</span>
+cat1.meow();
+<span class="hljs-comment">// exception</span>
+
+Cat.prototype = {
+  isHungry: <span class="hljs-literal">false</span>,
+  meow: <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
+    <span class="hljs-keyword">return</span> <span class="hljs-string">&apos;Meow!&apos;</span>;
+  }
+};
+<span class="hljs-comment">// new properties and methods are not available</span>
+<span class="hljs-comment">// for existing objects</span>
+cat1.isHungry;
+<span class="hljs-comment">// undefined</span>
+cat1.meow();
+<span class="hljs-comment">// exception</span>
+
+<span class="hljs-keyword">let</span> cat2 = <span class="hljs-keyword">new</span> Cat();
+cat2.color;
+<span class="hljs-comment">// white</span>
+cat2.meow();
+<span class="hljs-comment">// Meow!</span>
+cat2.isHungry;
+<span class="hljs-comment">// false</span>
+</code></pre>
+<h2 id="relevant-methods"><a name="relevant-methods" class="plugin-anchor" href="#relevant-methods"><i class="fa fa-link" aria-hidden="true"></i></a>Relevant Methods</h2>
+<ul>
+<li><code>hasOwnProperty()</code><ul>
+<li><code>hasOwnProperty()</code> allows user to find the origin of a particular property.</li>
+<li>This method takes in a string of the property name, and returns a boolean indicating whether or not the property belongs to the object itself (i.e. that property was not inherited).</li>
+</ul>
+</li>
+<li><code>isPrototypeOf()</code><ul>
+<li>This method checks whether or not an object exists in another object&apos;s <code>prototype</code> chain.</li>
+<li>It can be used to confirm if a particular object serves as the prototype of another object.</li>
+</ul>
+</li>
+<li><code>Object.getPrototypeOf()</code><ul>
+<li>This method retrieves the prototype of a given object.</li>
+</ul>
+</li>
+<li><code>constructor</code><ul>
+<li>A property that returns a reference to the constructor function that creates the object.</li>
+<li>Objects created with literal notation are constructed with the <code>Object()</code> constructor function.</li>
+</ul>
+</li>
+</ul>
+<h2 id="proto"><a name="proto" class="plugin-anchor" href="#proto"><i class="fa fa-link" aria-hidden="true"></i></a><code>__proto__</code></h2>
+<ul>
+<li><p>An object is secretly linked to its constructor function&apos;s <code>prototype</code> object through that instance&apos;s <code>__proto__</code> property.</p>
+<pre><code class="lang-js">object.__proto__ === object.constructor.prototype;
+<span class="hljs-comment">// true</span>
+</code></pre>
+</li>
+<li><p>It is highly discouraged to reassign the <code>__proto__</code> property, or even use it in any written code.</p>
+<ul>
+<li>There are compatibility issues across browsers.</li>
+<li>Since the JavaScript engine searches and accesses properties along the prototype chain, mutating an object&apos;s prototype can lead to performance issues.</li>
+</ul>
+</li>
+</ul>
+<h2 id="inheritance"><a name="inheritance" class="plugin-anchor" href="#inheritance"><i class="fa fa-link" aria-hidden="true"></i></a>Inheritance</h2>
+<ul>
+<li>Inheritance in JavaScript is all about setting up the <code>prototype</code> chain.<ul>
+<li>Users should not use <code>__proto__</code> to manage inheritance.</li>
+<li>Users should not inherit only the prototype, because this doesn&apos;t set up the prototype chain, and any changes made to a child object will also be reflected in a parent object.</li>
+</ul>
+</li>
+</ul>
+<pre><code class="lang-js"><span class="hljs-comment">// inappropriate</span>
+Child.prototype = Parent.prototype
+</code></pre>
+<ul>
+<li>Use <code>Object.create()</code> to manage inheritance without altering the prototype.</li>
+<li>This method takes in a single object as an argument, and returns a new object with its <code>__proto__</code> property set to the argument passed into it.</li>
+<li><p>Objects created with this method extend from the passed in argument.</p>
+<pre><code class="lang-js"><span class="hljs-keyword">const</span> mammal = {
+vertebrate: <span class="hljs-literal">true</span>,
+earBones: <span class="hljs-number">3</span>
+};
+<span class="hljs-comment">// rabbit extends mammal</span>
+<span class="hljs-keyword">const</span> rabbit = <span class="hljs-built_in">Object</span>.create(mammal);
+<span class="hljs-built_in">console</span>.log(rabbit.__proto__ === mammal);
+<span class="hljs-comment">// true</span>
+</code></pre>
+</li>
+<li><p>Create inheritance
+```js
+function Animal (name) {
+this.name = name;
+}</p>
+</li>
+</ul>
+<p>Animal.prototype.walk = function () {
+  console.log(<code>${this.name} walks!</code>);
+};</p>
+<p>function Cat (name) {
+  // call super constructor; use call
+  // instead of new operator so that
+  // no Animal object is created
+  Animal.call(this, name);
+  this.lives = 9;
+}</p>
+<p>Cat.prototype.constructor === Cat
+// true</p>
+<p>// link Cat.prototype.<strong>proto</strong> to Animal.prototype
+Cat.prototype = Object.create(Animal.prototype);</p>
+<p>// now Cat prototype&apos;s constructor is set to Animal
+// <a href="https://stackoverflow.com/a/20830553" target="_blank">https://stackoverflow.com/a/20830553</a>
+Cat.prototype.constructor
+// Animal</p>
+<p>// so its constructor needs to be changed back
+Cat.prototype.constructor = Cat;</p>
+<p>// add a method only shared by Cat objects
+Cat.prototype.meow = function () {
+  console.log(&apos;Meow!&apos;);
+};</p>
+<p>const bambi = new Cat(&apos;Bambi&apos;);
+bambi.meow();
+bambi.walk();
+bambi.name;
+```</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="02-functions-at-runtime.html" class="navigation navigation-prev " aria-label="Previous page: Functions at runtime">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="04-object-oriented-design-patterns.html" class="navigation navigation-next " aria-label="Next page: Object-oriented design patterns">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Classes and objects","level":"1.3.3","depth":2,"next":{"title":"Object-oriented design patterns","level":"1.3.4","depth":2,"path":"object-oriented-javascript/04-object-oriented-design-patterns.md","ref":"object-oriented-javascript/04-object-oriented-design-patterns.md","articles":[]},"previous":{"title":"Functions at runtime","level":"1.3.2","depth":2,"path":"object-oriented-javascript/02-functions-at-runtime.md","ref":"object-oriented-javascript/02-functions-at-runtime.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["-sharing","github","anchors","splitter"],"pluginsConfig":{"github":{"url":"https://github.com/tuliren/javascript-notes"},"anchors":{},"splitter":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"object-oriented-javascript/03-classes-and-objects.md","mtime":"2019-05-26T20:36:56.524Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-05-26T20:42:51.445Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-github/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
