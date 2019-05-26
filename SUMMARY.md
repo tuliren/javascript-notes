@@ -11,4 +11,4 @@
   * [Objects in depth](object-oriented-javascript/01-objects-in-depth.md)
   * [Functions at runtime](object-oriented-javascript/02-functions-at-runtime.md)
   * [Classes and objects](object-oriented-javascript/03-classes-and-objects.md)
-  * [Object-oriented design patterns](object-oriented-javascript/04-objects-oriented-design-patterns.md)
+  * [Object-oriented design patterns](object-oriented-javascript/04-object-oriented-design-patterns.md)
