@@ -18,4 +18,5 @@ Source: [Udacity](https://www.udacity.com/course/object-oriented-javascript--ud7
 * [Object-oriented design patterns](object-oriented-javascript/04-objects-oriented-design-patterns.md)
 
 ## Web Tooling Automation
+Source: [Udacity](https://www.udacity.com/course/web-tooling-automation--ud892)
 * [Productive Sublime](web-tooling-automation/01-productive-sublime.md)
