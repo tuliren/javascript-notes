@@ -79,6 +79,7 @@ sayGreeting(); // undefined
 ## Function expressions
 - A function stored in a variable.
 - Anonymous function.
+
 ```js
 var variable = function(params) {
   // anonymous function body
