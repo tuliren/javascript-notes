@@ -70,6 +70,6 @@ gulp.task('default', gulp.series('copy-html', 'copy-images', 'styles', 'lint', f
   watch('./dist/index.html').on('change', browserSync.reload);
 
   browserSync.init({
-    server: "./"
+    server: "./dist"
   });
 }));
