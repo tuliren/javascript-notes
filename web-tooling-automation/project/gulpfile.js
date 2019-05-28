@@ -5,6 +5,7 @@ const sass = require('gulp-sass');
 const watch = require('gulp-watch');
 const autoprefixer = require('gulp-autoprefixer');
 const eslint = require('gulp-eslint');
+const concat = require('gulp-concat');
 const browserSync = require('browser-sync').create();
 const jasmineBrowser = require('gulp-jasmine-browser');
 
@@ -47,6 +48,20 @@ gulp.task('test-browser', function() {
     .src('tests/spec/extraSpec.js')
     .pipe(jasmineBrowser.specRunner())
     .pipe(jasmineBrowser.server({ port: 3001 }));
+});
+
+gulp.task('scripts', function() {
+  return gulp
+    .src('js/**/*.js')
+    .pipe(concat('all.js'))
+    .pipe(gulp.dest('dist/js'));
+});
+
+gulp.task('scripts-dist', function() {
+  return gulp
+    .src('js/**/*.js')
+    .pipe(concat('all.js'))
+    .pipe(gulp.dest('dist/js'));
 });
 
 gulp.task('copy-html', function() {
