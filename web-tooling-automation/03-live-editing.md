@@ -21,10 +21,6 @@ npm install browser-sync
 
 2. Add browser-sync to `gulpfile.js`
 ```js
-const gulp = require('gulp');
-const sass = require('gulp-sass');
-const watch = require('gulp-watch');
-const autoprefixer = require('gulp-autoprefixer');
 const browserSync = require('browser-sync').create();
 
 gulp.task('styles', function() {
@@ -37,6 +33,7 @@ gulp.task('styles', function() {
       })
     )
     .pipe(gulp.dest('./css'))
+    // new pipe
     .pipe(browserSync.stream());
 });
 
