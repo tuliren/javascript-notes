@@ -1,28 +1,30 @@
-# How to Prevent Disasters
+# Linting
 
-## Linting
-- Approaches
-  - Edit (live linting)
-  - Build process
-  - Pre-commit hook in version control
-- Targets
-  - Code style
-  - Syntax
-- Linters
-  - JSHint
-  - JSCS
-  - ESLint
-    - Support ES6 code
-    - Can be extended
-    - Easily-understandable output
-- Install eslint
+## Approaches
+- Edit (live linting)
+- Build process
+- Pre-commit hook in version control
+
+## Targets
+- Code style
+- Syntax
+
+## Linters
+- JSHint
+- JSCS
+- ESLint
+- Support ES6 code
+- Can be extended
+- Easily-understandable output
+
+## Install eslint
 
 ```sh
 npm install -g eslint
 eslint --init
 ```
 
-- Set up eslint in gulp
+## Set up eslint in gulp
 
 ```js
 const eslint = require('gulp-eslint');
