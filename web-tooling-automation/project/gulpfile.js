@@ -4,8 +4,9 @@ const gulp = require('gulp');
 const sass = require('gulp-sass');
 const watch = require('gulp-watch');
 const autoprefixer = require('gulp-autoprefixer');
-const browserSync = require('browser-sync').create();
 const eslint = require('gulp-eslint');
+const browserSync = require('browser-sync').create();
+const jasmineBrowser = require('gulp-jasmine-browser');
 
 gulp.task('styles', function() {
   gulp
@@ -34,6 +35,20 @@ gulp.task('lint', function() {
       // lint error, return the stream and pipe to failOnError last.
       .pipe(eslint.failOnError())
   );
+});
+
+gulp.task('test-console', function() {
+  return gulp
+    .src('tests/spec/extraSpec.js')
+    .pipe(jasmineBrowser.specRunner({ console: true }))
+    .pipe(jasmineBrowser.headless({ driver: 'chrome' }));
+});
+
+gulp.task('test-browser', function() {
+  gulp
+    .src('tests/spec/extraSpec.js')
+    .pipe(jasmineBrowser.specRunner())
+    .pipe(jasmineBrowser.server({ port: 3001 }));
 });
 
 // default default task
