@@ -6,6 +6,7 @@ const watch = require('gulp-watch');
 const autoprefixer = require('gulp-autoprefixer');
 const eslint = require('gulp-eslint');
 const concat = require('gulp-concat');
+const uglify = require('gulp-uglify-es').default;
 const browserSync = require('browser-sync').create();
 const jasmineBrowser = require('gulp-jasmine-browser');
 
@@ -61,6 +62,7 @@ gulp.task('scripts-dist', function() {
   return gulp
     .src('js/**/*.js')
     .pipe(concat('all.js'))
+    .pipe(uglify())
     .pipe(gulp.dest('dist/js'));
 });
 
