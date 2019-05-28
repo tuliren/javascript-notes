@@ -62,3 +62,15 @@ gulp.task('dist', gulp.series(
   'scripts-dist'
 ));
 ```
+
+## Future Proof JavaScript
+- There is a way to run the latest spec of JavaScript, ES6, despite the browser support.
+- The transpiler takes one programming language, and converts it into another.
+- Babel JS
+
+```js
+const babel = require('gulp-babel');
+
+// add to scripts tasks
+// .pipe(babel())
+```

@@ -7,6 +7,7 @@ const autoprefixer = require('gulp-autoprefixer');
 const eslint = require('gulp-eslint');
 const concat = require('gulp-concat');
 const uglify = require('gulp-uglify-es').default;
+const babel = require('gulp-babel');
 const browserSync = require('browser-sync').create();
 const jasmineBrowser = require('gulp-jasmine-browser');
 
@@ -54,6 +55,7 @@ gulp.task('test-browser', function() {
 gulp.task('scripts', function() {
   return gulp
     .src('js/**/*.js')
+    .pipe(babel())
     .pipe(concat('all.js'))
     .pipe(gulp.dest('dist/js'));
 });
@@ -61,6 +63,7 @@ gulp.task('scripts', function() {
 gulp.task('scripts-dist', function() {
   return gulp
     .src('js/**/*.js')
+    .pipe(babel())
     .pipe(concat('all.js'))
     .pipe(uglify())
     .pipe(gulp.dest('dist/js'));
