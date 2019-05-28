@@ -14,3 +14,6 @@ _book
 *.epub
 *.mobi
 *.pdf
+
+# Web tooling automation project dist
+web-tooling-automation/project/dist/
