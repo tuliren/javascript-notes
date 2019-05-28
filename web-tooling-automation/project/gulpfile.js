@@ -78,6 +78,14 @@ gulp.task('copy-images', function() {
     .pipe(gulp.dest('dist/img'))
 });
 
+gulp.task('dist', gulp.series(
+  'copy-html',
+  'copy-images',
+  'styles',
+  'lint',
+  'scripts-dist'
+));
+
 // default task
 gulp.task('default', gulp.series('copy-html', 'copy-images', 'styles', 'lint', function() {
   // watch for sass changes and run styles task
