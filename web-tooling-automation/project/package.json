@@ -13,12 +13,16 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "eslint": "^5.16.0",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-plugin-import": "^2.17.3",
     "gulp": "^4.0.2",
     "gulp-autoprefixer": "^6.1.0",
     "gulp-watch": "^5.0.1"
   },
   "dependencies": {
     "browser-sync": "^2.26.5",
+    "gulp-eslint": "^5.0.0",
     "gulp-sass": "^4.0.2"
   }
 }
