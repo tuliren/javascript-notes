@@ -66,7 +66,8 @@ gulp.task('default', gulp.series('copy-html', 'copy-images', 'styles', 'lint', f
   // watch for sass changes and run styles task
   watch('sass/**/*.scss', gulp.series('styles'));
   watch('js/**/*.js', gulp.series('lint'));
-  watch('/index.html', gulp.series('copy-html'));
+  watch('index.html', gulp.series('copy-html'));
+  watch('./dist/index.html').on('change', browserSync.reload);
 
   browserSync.init({
     server: "./"
