@@ -74,3 +74,28 @@ const babel = require('gulp-babel');
 // add to scripts tasks
 // .pipe(babel())
 ```
+
+## Source Map
+- Source maps are files that associate line numbers from the processed file to the original.
+- The browser can then lookup the current line number in the sourcemap and open the right source file at the correct line when debugging.
+
+```sh
+npm install gulp-sourcemaps
+```
+
+```js
+const sourcemaps = require('gulp-sourcemaps');
+
+gulp.task('scripts-dist', function() {
+  gulp.src('js/**/*.js')
+    // initialize after getting the source  
+    .pipe(sourcemaps.init())
+    .pipe(concat('all.js'))
+    .pipe(uglify())
+    // write source maps after all plugins
+    // and pipes have been applied but before
+    // saving to the destination
+    .pipe(sourcemaps.write())
+    .pipe(gulp.dest('dist/js'));
+});
+```

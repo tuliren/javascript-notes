@@ -8,6 +8,7 @@ const eslint = require('gulp-eslint');
 const concat = require('gulp-concat');
 const uglify = require('gulp-uglify-es').default;
 const babel = require('gulp-babel');
+const sourcemaps = require('gulp-sourcemaps');
 const browserSync = require('browser-sync').create();
 const jasmineBrowser = require('gulp-jasmine-browser');
 
@@ -63,9 +64,11 @@ gulp.task('scripts', function() {
 gulp.task('scripts-dist', function() {
   return gulp
     .src('js/**/*.js')
+    .pipe(sourcemaps.init())
     .pipe(babel())
     .pipe(concat('all.js'))
     .pipe(uglify())
+    .pipe(sourcemaps.write())
     .pipe(gulp.dest('dist/js'));
 });
 
