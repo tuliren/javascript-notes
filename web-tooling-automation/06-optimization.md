@@ -99,3 +99,28 @@ gulp.task('scripts-dist', function() {
     .pipe(gulp.dest('dist/js'));
 });
 ```
+
+## Image Optimization
+- Lossless compression
+  - `imagemin`: can losslessly compress JPEGs, GIFS, PNGs and SVGs.
+- Lossy compression
+  - Lossy compression can only recreate an approximation of the original.
+  - PNG quantization
+    - There are colors that our vision and brain perceives as very similar, even though they’re different.
+    - `pngquant`:  automatically revert the change if a certain quality threshold isn’t passed.
+
+```js
+const imagemin = require('gulp-imagemin');
+const pngquant = require('imagemin-pngquant');
+
+gulp.task('default', function() {
+  return gulp.src('src/images/*')
+    .pipe(imagemin({
+      // progressive rendering loads an image in layers where
+      // each layer makes the image more detailed
+      progressive: true,
+      use: [pngquant()]
+    }))
+    .pipe(gulp.dest('dist/images'));
+});
+```

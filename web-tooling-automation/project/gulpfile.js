@@ -8,9 +8,11 @@ const eslint = require('gulp-eslint');
 const concat = require('gulp-concat');
 const uglify = require('gulp-uglify-es').default;
 const babel = require('gulp-babel');
+const imagemin = require('gulp-imagemin');
 const sourcemaps = require('gulp-sourcemaps');
 const browserSync = require('browser-sync').create();
 const jasmineBrowser = require('gulp-jasmine-browser');
+const pngquant = require('imagemin-pngquant');
 
 gulp.task('styles', function() {
   return gulp
@@ -81,6 +83,12 @@ gulp.task('copy-html', function() {
 gulp.task('copy-images', function() {
   return gulp
     .src('img/*')
+    .pipe(imagemin({
+      // progressive rendering loads an image in layers where
+      // each layer makes the image more detailed
+      progressive: true,
+      use: [pngquant()]
+    }))
     .pipe(gulp.dest('dist/img'))
 });
 

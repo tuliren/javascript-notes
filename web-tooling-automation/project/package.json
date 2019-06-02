@@ -27,10 +27,12 @@
     "browser-sync": "^2.26.5",
     "gulp-concat": "^2.6.1",
     "gulp-eslint": "^5.0.0",
+    "gulp-imagemin": "^6.0.0",
     "gulp-jasmine-browser": "^4.1.0",
     "gulp-sass": "^4.0.2",
     "gulp-sourcemaps": "^2.6.5",
     "gulp-uglify-es": "^1.0.4",
+    "imagemin-pngquant": "^8.0.0",
     "jasmine-core": "^3.4.0",
     "puppeteer": "^1.17.0"
   }
