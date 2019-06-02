@@ -291,6 +291,103 @@
             
         </li>
     
+        <li class="chapter " data-level="1.4" >
+            
+                <span>
+            
+                    
+                    Web Tooling Automation
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../web-tooling-automation/01-productive-sublime.html">
+            
+                <a href="../web-tooling-automation/01-productive-sublime.html">
+            
+                    
+                    Productive Sublime
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../web-tooling-automation/02-build-with-gulp.html">
+            
+                <a href="../web-tooling-automation/02-build-with-gulp.html">
+            
+                    
+                    Build with Gulp
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../web-tooling-automation/03-live-editing.html">
+            
+                <a href="../web-tooling-automation/03-live-editing.html">
+            
+                    
+                    Live Editing
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="../web-tooling-automation/04-linting.html">
+            
+                <a href="../web-tooling-automation/04-linting.html">
+            
+                    
+                    Linting
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5" data-path="../web-tooling-automation/05-unit-test.html">
+            
+                <a href="../web-tooling-automation/05-unit-test.html">
+            
+                    
+                    Unit Test
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6" data-path="../web-tooling-automation/06-optimization.html">
+            
+                <a href="../web-tooling-automation/06-optimization.html">
+            
+                    
+                    Optimization
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
 
     
 
@@ -419,30 +516,31 @@ sayGreeting(); <span class="hljs-comment">// undefined</span>
 <h2 id="function-expressions"><a name="function-expressions" class="plugin-anchor" href="#function-expressions"><i class="fa fa-link" aria-hidden="true"></i></a>Function expressions</h2>
 <ul>
 <li>A function stored in a variable.</li>
-<li>Anonymous function.
-```js
-var variable = function(params) {
-// anonymous function body
-}</li>
+<li>Anonymous function.</li>
 </ul>
-<p>variable();</p>
-<pre><code>
-- Use the variable name to call the function.
-- Function expressions are not hoisted.
-
-```js
-sayGreeting(); // sayGreetings is not a function
-var sayGreeting = function() {
-  console.log(&quot;hello&quot;);
+<pre><code class="lang-js"><span class="hljs-keyword">var</span> variable = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">params</span>) </span>{
+  <span class="hljs-comment">// anonymous function body</span>
 }
 
-// equivalent code
-var sayGreeting;
+variable();
+</code></pre>
+<ul>
+<li>Use the variable name to call the function.</li>
+<li>Function expressions are not hoisted.</li>
+</ul>
+<pre><code class="lang-js">sayGreeting(); <span class="hljs-comment">// sayGreetings is not a function</span>
+<span class="hljs-keyword">var</span> sayGreeting = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+  <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&quot;hello&quot;</span>);
+}
+
+<span class="hljs-comment">// equivalent code</span>
+<span class="hljs-keyword">var</span> sayGreeting;
 sayGreeting();
-sayGreeting = function() {
-  console.log(&quot;hello&quot;);
+sayGreeting = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+  <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&quot;hello&quot;</span>);
 }
-</code></pre><h2 id="named-function-expressions"><a name="named-function-expressions" class="plugin-anchor" href="#named-function-expressions"><i class="fa fa-link" aria-hidden="true"></i></a>Named function expressions</h2>
+</code></pre>
+<h2 id="named-function-expressions"><a name="named-function-expressions" class="plugin-anchor" href="#named-function-expressions"><i class="fa fa-link" aria-hidden="true"></i></a>Named function expressions</h2>
 <pre><code class="lang-js"><span class="hljs-keyword">var</span> variable = <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">name</span>(<span class="hljs-params">params</span>) </span>{
   <span class="hljs-comment">// function body</span>
 }
@@ -514,7 +612,7 @@ movies(function(movieName) {
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Functions","level":"1.2.5","depth":2,"next":{"title":"Arrays","level":"1.2.6","depth":2,"path":"intro-to-javascript/06-arrays.md","ref":"intro-to-javascript/06-arrays.md","articles":[]},"previous":{"title":"Loops","level":"1.2.4","depth":2,"path":"intro-to-javascript/04-loops.md","ref":"intro-to-javascript/04-loops.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["-sharing","github","anchors","splitter"],"pluginsConfig":{"github":{"url":"https://github.com/tuliren/javascript-notes"},"anchors":{},"splitter":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"intro-to-javascript/05-functions.md","mtime":"2019-05-26T20:42:58.353Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-05-26T20:48:27.103Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Functions","level":"1.2.5","depth":2,"next":{"title":"Arrays","level":"1.2.6","depth":2,"path":"intro-to-javascript/06-arrays.md","ref":"intro-to-javascript/06-arrays.md","articles":[]},"previous":{"title":"Loops","level":"1.2.4","depth":2,"path":"intro-to-javascript/04-loops.md","ref":"intro-to-javascript/04-loops.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["-sharing","github","anchors","splitter"],"pluginsConfig":{"github":{"url":"https://github.com/tuliren/javascript-notes"},"anchors":{},"splitter":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"intro-to-javascript/05-functions.md","mtime":"2019-06-02T03:38:35.432Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-06-02T03:39:41.019Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
