@@ -20,3 +20,8 @@ Source: [Udacity](https://www.udacity.com/course/object-oriented-javascript--ud7
 ## Web Tooling Automation
 Source: [Udacity](https://www.udacity.com/course/web-tooling-automation--ud892)
 * [Productive Sublime](web-tooling-automation/01-productive-sublime.md)
+* [Build with Gulp](web-tooling-automation/02-build-with-gulp.md)
+* [Live Editing](web-tooling-automation/03-live-editing.md)
+* [Linting](web-tooling-automation/04-linting.md)
+* [Unit Test](web-tooling-automation/05-unit-test.md)
+* [Optimization](web-tooling-automation/06-optimization.md)
