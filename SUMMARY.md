@@ -12,6 +12,9 @@
   * [Functions at runtime](object-oriented-javascript/02-functions-at-runtime.md)
   * [Classes and objects](object-oriented-javascript/03-classes-and-objects.md)
   * [Object-oriented design patterns](object-oriented-javascript/04-object-oriented-design-patterns.md)
+* JavaScript Promises
+  * [Creating promises](javascript-promises/01-creating-promises.md)
+  * [Chaining promises](javascript-promises/02-chaining-promises.md)
 * Web Tooling Automation
   * [Productive Sublime](web-tooling-automation/01-productive-sublime.md)
   * [Build with Gulp](web-tooling-automation/02-build-with-gulp.md)
