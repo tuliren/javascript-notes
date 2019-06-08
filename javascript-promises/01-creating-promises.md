@@ -52,14 +52,16 @@ const sequence = get('example.json')
 ```js
 var promise = new Promise(function(resolve, reject) {
   // call resolve when completed
-  resolve();
+  resolve(resolveParams);
   // call reject when there is an error
-  reject();
+  reject(rejectParams);
 });
 
 promise
-  // resolve function
-  .then(resolveFunction)
-  // reject function
-  .catch(rejectFunction);
+  .then(function(resolveParams) {
+    // resolve function
+  })
+  .catch(function(rejectParams) {
+    // reject function
+  });
 ```
