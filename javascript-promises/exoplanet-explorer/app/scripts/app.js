@@ -50,11 +50,26 @@ Instructions:
     });
   }
 
+  function getWithFetch(url) {
+    return fetch(url, {
+      method: 'get'
+    });
+  }
+
+  function getJson(url) {
+    return getWithFetch(url).then(function(response) {
+      return response.json();
+    });
+  }
+
   window.addEventListener('WebComponentsReady', function() {
     home = document.querySelector('section[data-route="home"]');
+    // alternative: getJson('../data/earth-like-results.json')
     get('../data/earth-like-results.json')
       .then(function(response) {
+        // alternative: addSearchHeader(response.query);
         addSearchHeader(response);
+        console.log(response);
       })
       .catch(function(error) {
         addSearchHeader('unknown');
