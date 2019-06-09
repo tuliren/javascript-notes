@@ -28,6 +28,7 @@ loadImage('above-the-fold.jpg', imgContainer1, function () {
 ```
 
 - Promises (`then`s)
+
 ```js
 const sequence = get('example.json')
 .then(doSomething)
@@ -49,6 +50,7 @@ const sequence = get('example.json')
   - Not a pass for safely executing long-running operations.
 
 ## Syntax
+
 ```js
 var promise = new Promise(function(resolve, reject) {
   // call resolve when completed
