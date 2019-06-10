@@ -4,16 +4,11 @@
 (function(document) {
   'use strict';
 
-  var home = null;
-
-  function sleep(ms) {
-    return new Promise(resolve => setTimeout(resolve, ms));
-  }
+  let home = null;
 
   /**
-   * Helper function to show the search query.
-   * @param {String} response - The unparsed JSON response from get.
-   * @param {String} query - The search query.
+   * Helper function to create a planet thumbnail - Promisified version!
+   * @param  {Object} data - The raw data describing the planet.
    */
   function addSearchHeader(query) {
     home.innerHTML = '<h2 class="page-title">query: ' + query + '</h2>';
@@ -24,11 +19,14 @@
    * @param  {Object} data - The raw data describing the planet.
    */
   function createPlanetThumb(data) {
-    var pT = document.createElement('planet-thumb');
-    for (var d in data) {
-      pT[d] = data[d];
-    }
-    home.appendChild(pT);
+    return new Promise(function (resolve) {
+      const pT = document.createElement('planet-thumb');
+      for (const d in data) {
+        pT[d] = data[d];
+      }
+      home.appendChild(pT);
+      resolve();
+    });
   }
 
   /**
@@ -38,7 +36,7 @@
    */
   function getWithXhr(url) {
     return new Promise(function(resolve, reject) {
-      var req = new XMLHttpRequest();
+      const req = new XMLHttpRequest();
       req.open('GET', url);
       req.onload = function() {
         if (req.status === 200) {
@@ -76,10 +74,23 @@
 
   window.addEventListener('WebComponentsReady', function() {
     home = document.querySelector('section[data-route="home"]');
+
     getJson('../data/earth-like-results.json')
       .then(function(response) {
-        response.results.forEach(function(url) {
-          getJson(url).then(createPlanetThumb);
+        // .map executes all of the network requests immediately.
+        const arrayOfPromises = response.results
+          .map(function (result) {
+            return getJson(result);
+          });
+
+        let sequence = Promise.resolve();
+        arrayOfPromises.forEach(function(request) {
+          // loop through the pending requests and render them in order
+          sequence = sequence.then(function() {
+            // request is a getJson call that's currently executing;
+            // createPlanetThumb will wait for it to resolve
+            return request.then(createPlanetThumb);
+          });
         });
       });
   });

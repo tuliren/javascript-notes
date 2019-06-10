@@ -57,6 +57,7 @@ getJson('../data/earth-like-results.json')
 ```
 
 - In parallel without guarantee of order of completion
+  - `.forEach`
 
 ```js
 getJson('../data/earth-like-results.json')
@@ -67,10 +68,10 @@ getJson('../data/earth-like-results.json')
   });
 ```
 
-- `Promise.all`
-  - Reject immediately if any promise rejects without waiting for the rest of the promises to settle.
-  - Resolve after every promises resolve.
-  - No order of completion is guaranteed.
+  - `Promise.all`
+    - Reject immediately if any promise rejects without waiting for the rest of the promises to settle.
+    - Resolve after every promises resolve.
+    - No order of completion is guaranteed.
 
 ```js
 Promise.all(arrayOfPromises)
@@ -87,6 +88,43 @@ getJson('../data/earth-like-results.json')
   .then(function(allData) {
     allData.forEach(function (data) {
       createPlanetThumb(data);
+    });
+  });
+```
+
+- Partially in parallel with order
+  - Execute methods that can run in parallel all at once
+  - Chain methods that require order in sequence
+  
+```js
+// change createPlanetThumb to a promise
+function createPlanetThumb(data) {
+  return new Promise(function (resolve) {
+    const pT = document.createElement('planet-thumb');
+    for (const d in data) {
+      pT[d] = data[d];
+    }
+    home.appendChild(pT);
+    resolve();
+  });
+}
+
+getJson('../data/earth-like-results.json')
+  .then(function(response) {
+    // .map executes all of the network requests immediately.
+    const arrayOfPromises = response.results
+      .map(function (result) {
+        return getJson(result);
+      });
+
+    let sequence = Promise.resolve();
+    arrayOfPromises.forEach(function(request) {
+      // loop through the pending requests and render them in order
+      sequence = sequence.then(function() {
+        // request is a getJson call that's currently executing;
+        // createPlanetThumb will wait for it to resolve
+        return request.then(createPlanetThumb);
+      });
     });
   });
 ```
