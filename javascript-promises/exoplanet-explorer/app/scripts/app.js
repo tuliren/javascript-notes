@@ -65,7 +65,6 @@
    * @return {Promise}    - A promise that passes the parsed JSON response.
    */
   function getJson(url) {
-    console.log(url);
     return get(url).then(function(response) {
       return response.json();
     });
@@ -75,10 +74,7 @@
     home = document.querySelector('section[data-route="home"]');
     getJson('../data/earth-like-results.json')
       .then(function(response) {
-        console.log(response);
-        console.log(response.query);
         addSearchHeader(response.query);
-        console.log(getJson(response.results[0]));
         return getJson(response.results[0])
       })
       .catch(function() {
