@@ -6,6 +6,10 @@
 
   var home = null;
 
+  function sleep(ms) {
+    return new Promise(resolve => setTimeout(resolve, ms));
+  }
+
   /**
    * Helper function to show the search query.
    * @param {String} response - The unparsed JSON response from get.
@@ -74,16 +78,9 @@
     home = document.querySelector('section[data-route="home"]');
     getJson('../data/earth-like-results.json')
       .then(function(response) {
-        addSearchHeader(response.query);
-        return getJson(response.results[0])
-      })
-      .catch(function() {
-        throw Error('Search Request Error');
-      })
-      .then(createPlanetThumb)
-      .catch(function(e) {
-        addSearchHeader('unknown');
-        console.log(e);
+        response.results.forEach(function(url) {
+          getJson(url).then(createPlanetThumb);
+        });
       });
   });
 })(document);

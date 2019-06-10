@@ -38,3 +38,55 @@ get('example.json')
 ```
 
 - Resolve does not always mean success ([reference](https://jakearchibald.com/2014/resolve-not-opposite-of-reject/)).
+
+## Execute Multiple Promises in Sequence
+- In sequence with guaranteed order of completion
+  - I.e. the promise starts first will resolve first.
+
+```js
+getJson('../data/earth-like-results.json')
+  .then(function(response) {
+    let sequence = Promise.resolve();
+
+    response.results.forEach(function(url) {
+      sequence = sequence
+        .then(() => getJson(url))
+        .then(createPlanetThumb);
+    });
+  });
+```
+
+- In parallel without guarantee of order of completion
+
+```js
+getJson('../data/earth-like-results.json')
+  .then(function(response) {
+    response.results.forEach(function(url) {
+      getJson(url).then(createPlanetThumb);
+    });
+  });
+```
+
+- `Promise.all`
+  - Reject immediately if any promise rejects without waiting for the rest of the promises to settle.
+  - Resolve after every promises resolve.
+  - No order of completion is guaranteed.
+
+```js
+Promise.all(arrayOfPromises)
+  .then(function(arrayOfValues) {
+    // function body
+  });
+```
+
+```js
+getJson('../data/earth-like-results.json')
+  .then(function(response) {
+    return Promise.all(response.results.map(getJson));
+  })
+  .then(function(allData) {
+    allData.forEach(function (data) {
+      createPlanetThumb(data);
+    });
+  });
+```
