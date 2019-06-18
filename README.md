@@ -10,6 +10,13 @@ Source: [Udacity 803](https://www.udacity.com/course/intro-to-javascript--ud803)
 * [Arrays](intro-to-javascript/06-arrays.md)
 * [Objects](intro-to-javascript/07-objects.md)
 
+## ES6 - JavaScript Improved
+Source: [Udacity 356](https://www.udacity.com/course/es6-javascript-improved--ud356)
+* [Syntax](es6-javascript-improved/01-syntax.md)
+* [Functions](es6-javascript-improved/02-functions.md)
+* [Built-ins](es6-javascript-improved/03-built-ins.md)
+* [Developer-Fu](es6-javascript-improved/04-developer-fu.md)
+
 ## Object-Oriented JavaScript
 Source: [Udacity 711](https://www.udacity.com/course/object-oriented-javascript--ud711)
 * [Objects in depth](object-oriented-javascript/01-objects-in-depth.md)
