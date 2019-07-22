@@ -71,7 +71,7 @@ const iterator1 = set1.keys();   // return a SetIterator
 const iterator2 = set1.values(); // return a SetIterator
 ```
 
-## `WeakSet`
+### `WeakSet`
 - A normal `Set` with the following differences:
   - `WeakSet` only contains objects.
   - Not iterable and thus cannot be looped over.
@@ -117,9 +117,43 @@ for (const [key, value] of map) {
 map.forEach((value, key) => fn(value, key));
 ```
 
-## `WeakMap`
+### `WeakMap`
 - A normal `Map` with the following differences:
   - Only contain objects as keys.
   - Not iterable.
   - Does not have a `.clear()` method.
 - When an object is deleted, the object key will also be deleted from the WeakMap when garbage collection runs.
+
+## Promises
+- A promise will start some work that will be done asynchronously.
+- A Promise constructor takes a function with two functions.
+  - When the promise succeeds, the `resolve` function will be called.
+  - When the promise fails, the `reject` function will be called.
+
+- A promise returns immediately.
+- The promise object has a `.then()` method that takes in the `resolve` and `reject` functions.
+
+```js
+const promise = new Promise(function (resolve, reject) {
+  if (successful) {
+    resolve(arguments);
+  } else {
+    reject('Promise failed');
+  }
+});
+
+promise.then((params) => {
+  console.log(`Succeed: ${params}`);
+}, (errorMessage) => {
+  console.log(errorMessage);
+});
+```
+
+## Proxies
+- `Proxy` constructor takes in two items:
+  - The object to be proxied.
+  - The proxy handler object.
+    - It contains the list of methods it will handle for the proxied object.
+- Pass through proxy
+  - `new Proxy(object, {})`
+- `get` trap
