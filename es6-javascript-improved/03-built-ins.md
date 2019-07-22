@@ -43,3 +43,83 @@ const bowl = {
   [Symbol('banana')]: { color: 'yellow', weight: 176.845 }
 };
 ```
+
+## `Set`
+- Sets are not indexed-based.
+- Items in a `Set` cannot be accessed individually.
+
+```js
+// create
+const set1 = new Set()
+const set2 = new Set(array)
+
+// modify
+set1.add(element);    // return the set itself
+set2.delete(element); // return true or false
+
+// delete
+set1.clear();
+
+// check length
+set1.size;
+
+// check element existence
+set2.has(element);
+
+// retrieve all values
+const iterator1 = set1.keys();   // return a SetIterator
+const iterator2 = set1.values(); // return a SetIterator
+```
+
+## `WeakSet`
+- A normal `Set` with the following differences:
+  - `WeakSet` only contains objects.
+  - Not iterable and thus cannot be looped over.
+  - Does not have a `.clear()` method.
+- When an object is deleted, it will also be deleted from the `WeakSet`
+ when garbage collection runs.
+- `WeakSet` is useful when there needs an efficient, lightweight solution for creating groups of objects.
+
+## `Map`
+- Both the keys and the values can be objects, primitive values, or a combination of the two.
+
+```js
+const map = new Map();
+map.set(key, value); // return the map itself
+map.get(key);
+map.delete(key);     // return true or false
+map.clear();
+map.has(key);
+```
+
+### Looping through `Map`
+- Default `MapIterator`
+
+```js
+const iterator1 = map.keys();
+iterator1.next();
+
+const iterator2 = map.values();
+iterator2.next();
+```
+
+- `for...of` loop
+
+```js
+for (const [key, value] of map) {
+  // ...
+}
+```
+
+- `forEach` loop
+
+```js
+map.forEach((value, key) => fn(value, key));
+```
+
+## `WeakMap`
+- A normal `Map` with the following differences:
+  - Only contain objects as keys.
+  - Not iterable.
+  - Does not have a `.clear()` method.
+- When an object is deleted, the object key will also be deleted from the WeakMap when garbage collection runs.
