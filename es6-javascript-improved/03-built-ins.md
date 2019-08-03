@@ -156,4 +156,82 @@ promise.then((params) => {
     - It contains the list of methods it will handle for the proxied object.
 - Pass through proxy
   - `new Proxy(object, {})`
-- `get` trap
+  - It just passes the request directly to the source object.
+
+### `get` trap
+- Intercept calls to properties.
+- Take over whenever any property on the proxy is accessed.
+
+```js
+const richard = {status: 'looking for work'};
+const handler = {
+  /**
+   * @param target   the proxied object (richard)
+   * @param propName the name of the property being accessed (status)
+   */
+  get(target, propName) {
+    return target[propName];
+  }
+};
+const agent = new Proxy(richard, handler);
+```
+
+### `set` trap
+- Intercepting code that will change a property.
+
+```js
+const richard = {status: 'looking for work'};
+const handler = {
+  /**
+   * @param target   the proxied object (richard)
+   * @param propName the name of the property being modified (payRate)
+   * @param value    the new value to be set to propName (payRate)
+   */
+  set(target, propName, value) {
+    // if the pay is being set, take 15% as commission
+    if (propName === 'payRate') {
+        value = value * 0.85;
+    }
+    target[propName] = value;
+  }
+};
+const agent = new Proxy(richard, handler);
+```
+
+### All traps
+- `get` trap: handle calls to property access.
+- `set` trap: handle setting the property to a new value.
+- `apply` trap: handle being invoked (the object being proxied is a function).
+- `has` trap: handle the using in operator.
+- `deleteProperty` trap: handle if a property is deleted.
+- `ownKeys` trap: handle when all keys are requested.
+- `construct` trap: handle when the proxy is used with the new keyword as a constructor.
+- `defineProperty` trap: handle when defineProperty is used to create a new property on the object.
+- `getOwnPropertyDescriptor` trap: handle getting the property's descriptors.
+- `preventExtenions` trap: handle calls to Object.preventExtensions() on the proxy object.
+- `isExtensible` trap: handle calls to Object.isExtensible on the proxy object.
+- `getPrototypeOf` trap: handle calls to Object.getPrototypeOf on the proxy object.
+- `setPrototypeOf` trap: handle calls to Object.setPrototypeOf on the proxy object.
+
+### Proxies vs ES5 getter / setter
+- With ES5's getter and setter methods, you need to know before hand the properties that are going to be get/set.
+- With ES6 Proxies, we do not need to know the properties beforehand.
+
+```js
+var obj = {
+  _age: 5,
+  _height: 4,
+
+  get age() {
+    console.log(`getting the "age" property`);
+    console.log(this._age);
+  },
+  get height() {
+    console.log(`getting the "height" property`);
+    console.log(this._height);
+  }
+};
+
+obj.age;    // logs 'getting the "age" property' & 5
+obj.height; // logs 'getting the "height" property' & 4
+```
