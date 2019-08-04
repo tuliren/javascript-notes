@@ -235,3 +235,42 @@ var obj = {
 obj.age;    // logs 'getting the "age" property' & 5
 obj.height; // logs 'getting the "height" property' & 4
 ```
+
+## Generators
+- Use a generator to be able to pause a function mid-execution.
+  - `function* name() { ... }`
+- The asterisk of the generator can be placed anywhere between the `function` keyword and the function name.
+- The community has coalesced into having the asterisk appear right next to the `function` keyword.
+- Generators cannot be defined with fat arrow functions.
+- Every call to `next()` will
+  - Fulfill the previous yield expression if there is any;
+  - Return the value following the next `yield`;
+  - Pause at the same next `yield` statement.
+
+```js
+function* foo() {
+  console.log(`function starts`);
+  // the first next() returns 123 and pause here
+  const a = (yield 123);
+  console.log(`a: ${a}`);
+  // the second next(456) replace (yield 123) with 456,
+  // and assign it to a, print out a's value, and pause here
+  yield a;
+  console.log(`function ends`);
+  // the third next() will print out the statement,
+  // and return undefined
+}
+
+const iterator = foo();
+iterator.next();
+// function starts
+// { value: 123, done: false }
+
+iterator.next(456);
+// a: 456
+// { value: 456, done: false }
+
+iterator.next();
+// function ends
+// { value: undefined, done: false }
+```
