@@ -32,4 +32,9 @@ if (!String.prototype.startsWith) {
   - ES6 to ES5
   - JSX to JavaScript
   - Flow to JavaScript
-
+- Babel performs code transformation through plugins.
+- Presets are groups of plugins.
+  - `@babel/preset-es2015` converts ES6 to ES5.
+- `.babelrc` specifies plugins or presets.
+  - `presets: ['es2015']`
+- Babel uses both `Node` and `NPM` to distribute its plugins. Both of them are needed to use Babel.
