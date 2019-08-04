@@ -7,6 +7,11 @@
   * [Functions](intro-to-javascript/05-functions.md)
   * [Arrays](intro-to-javascript/06-arrays.md)
   * [Objects](intro-to-javascript/07-objects.md)
+* ES6 - JavaScript Improved
+  * [Syntax](es6-javascript-improved/01-syntax.md)
+  * [Functions](es6-javascript-improved/02-functions.md)
+  * [Built-ins](es6-javascript-improved/03-built-ins.md)
+  * [Developer-Fu](es6-javascript-improved/04-developer-fu.md)
 * Object-Oriented JavaScript
   * [Objects in depth](object-oriented-javascript/01-objects-in-depth.md)
   * [Functions at runtime](object-oriented-javascript/02-functions-at-runtime.md)
