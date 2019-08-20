@@ -32,6 +32,7 @@ Project: [Exoplanet Explorer](https://github.com/udacity/exoplanet-explorer)
 
 ## JavaScript Testing
 Source: [Udacity 549](https://www.udacity.com/course/javascript-testing--ud549)
+Project: [Udacity 549](https://github.com/udacity/ud549)
 * [Rethinking testing](javascript-testing/01-rethinking-testing.md)
 * [Writing test suites](javascript-testing/02-writing-test-suites.md)
 
