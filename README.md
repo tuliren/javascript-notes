@@ -26,9 +26,14 @@ Source: [Udacity 711](https://www.udacity.com/course/object-oriented-javascript-
 
 ## JavaScript Promises
 Source: [Udacity 898](https://www.udacity.com/course/javascript-promises--ud898)
-Porject: [Exoplanet Explorer](https://github.com/udacity/exoplanet-explorer)
+Project: [Exoplanet Explorer](https://github.com/udacity/exoplanet-explorer)
 * [Creating promises](javascript-promises/01-creating-promises.md)
 * [Chaining promises](javascript-promises/02-chaining-promises.md)
+
+## JavaScript Testing
+Source: [Udacity 549](https://www.udacity.com/course/javascript-testing--ud549)
+* [Rethinking testing](javascript-testing/01-rethinking-testing.md)
+* [Writing test suites](javascript-testing/02-writing-test-suites.md)
 
 ## Web Tooling Automation
 Source: [Udacity 892](https://www.udacity.com/course/web-tooling-automation--ud892)

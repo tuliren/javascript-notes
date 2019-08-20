@@ -20,6 +20,9 @@
 * JavaScript Promises
   * [Creating promises](javascript-promises/01-creating-promises.md)
   * [Chaining promises](javascript-promises/02-chaining-promises.md)
+* JavaScript Testing
+  * [Rethinking testing](javascript-testing/01-rethinking-testing.md)
+  * [Writing test suites](javascript-testing/02-writing-test-suites.md)
 * Web Tooling Automation
   * [Productive Sublime](web-tooling-automation/01-productive-sublime.md)
   * [Build with Gulp](web-tooling-automation/02-build-with-gulp.md)
