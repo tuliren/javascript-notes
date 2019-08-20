@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>Build with Gulp · GitBook</title>
+        <title>Writing test suites · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -65,10 +65,8 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="03-live-editing.html" />
     
-    
-    <link rel="prev" href="01-productive-sublime.html" />
+    <link rel="prev" href="01-rethinking-testing.html" />
     
 
     </head>
@@ -421,9 +419,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.6.1" data-path="../javascript-testing/01-rethinking-testing.html">
+        <li class="chapter " data-level="1.6.1" data-path="01-rethinking-testing.html">
             
-                <a href="../javascript-testing/01-rethinking-testing.html">
+                <a href="01-rethinking-testing.html">
             
                     
                     Rethinking testing
@@ -434,9 +432,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.6.2" data-path="../javascript-testing/02-writing-test-suites.html">
+        <li class="chapter active" data-level="1.6.2" data-path="02-writing-test-suites.html">
             
-                <a href="../javascript-testing/02-writing-test-suites.html">
+                <a href="02-writing-test-suites.html">
             
                     
                     Writing test suites
@@ -466,9 +464,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.7.1" data-path="01-productive-sublime.html">
+        <li class="chapter " data-level="1.7.1" data-path="../web-tooling-automation/01-productive-sublime.html">
             
-                <a href="01-productive-sublime.html">
+                <a href="../web-tooling-automation/01-productive-sublime.html">
             
                     
                     Productive Sublime
@@ -479,9 +477,9 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.7.2" data-path="02-build-with-gulp.html">
+        <li class="chapter " data-level="1.7.2" data-path="../web-tooling-automation/02-build-with-gulp.html">
             
-                <a href="02-build-with-gulp.html">
+                <a href="../web-tooling-automation/02-build-with-gulp.html">
             
                     
                     Build with Gulp
@@ -492,9 +490,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.7.3" data-path="03-live-editing.html">
+        <li class="chapter " data-level="1.7.3" data-path="../web-tooling-automation/03-live-editing.html">
             
-                <a href="03-live-editing.html">
+                <a href="../web-tooling-automation/03-live-editing.html">
             
                     
                     Live Editing
@@ -505,9 +503,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.7.4" data-path="04-linting.html">
+        <li class="chapter " data-level="1.7.4" data-path="../web-tooling-automation/04-linting.html">
             
-                <a href="04-linting.html">
+                <a href="../web-tooling-automation/04-linting.html">
             
                     
                     Linting
@@ -518,9 +516,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.7.5" data-path="05-unit-test.html">
+        <li class="chapter " data-level="1.7.5" data-path="../web-tooling-automation/05-unit-test.html">
             
-                <a href="05-unit-test.html">
+                <a href="../web-tooling-automation/05-unit-test.html">
             
                     
                     Unit Test
@@ -531,9 +529,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.7.6" data-path="06-optimization.html">
+        <li class="chapter " data-level="1.7.6" data-path="../web-tooling-automation/06-optimization.html">
             
-                <a href="06-optimization.html">
+                <a href="../web-tooling-automation/06-optimization.html">
             
                     
                     Optimization
@@ -579,7 +577,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >Build with Gulp</a>
+        <a href=".." >Writing test suites</a>
     </h1>
 </div>
 
@@ -594,78 +592,24 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="build-with-gulp"><a name="build-with-gulp" class="plugin-anchor" href="#build-with-gulp"><i class="fa fa-link" aria-hidden="true"></i></a>Build with Gulp</h1>
-<h2 id="build-tools"><a name="build-tools" class="plugin-anchor" href="#build-tools"><i class="fa fa-link" aria-hidden="true"></i></a>Build Tools</h2>
+                                <h1 id="writing-test-suites"><a name="writing-test-suites" class="plugin-anchor" href="#writing-test-suites"><i class="fa fa-link" aria-hidden="true"></i></a>Writing Test Suites</h1>
+<h2 id="jasmine-library"><a name="jasmine-library" class="plugin-anchor" href="#jasmine-library"><i class="fa fa-link" aria-hidden="true"></i></a><code>Jasmine</code> library</h2>
 <ul>
-<li>Needed features<ul>
-<li>Fast</li>
-<li>Community-driven</li>
-<li>Modular &amp; extensible</li>
-<li>Feature-rich</li>
-</ul>
-</li>
-<li>Examples<ul>
-<li>Grunt<ul>
-<li>Use configuration</li>
-<li>Write to tmp files</li>
-</ul>
-</li>
-<li>Gulp<ul>
-<li>Use code (JavaScript) over configuration</li>
-<li>Excute tasks in parallel</li>
-<li>Convert files to in-memory stream and no tmp files - signficantly less I/O</li>
+<li><code>it</code> defines a spec, a container for tests.</li>
+<li><code>describe</code> defines a suite, a group of related specs.</li>
+<li><code>expect(actualValue).matcherFn(expectedValue)</code></li>
+<li>Matchers<ul>
+<li><code>toBe</code></li>
+<li><code>not.toBe</code></li>
 </ul>
 </li>
 </ul>
-</li>
-</ul>
-<h2 id="initialize-project"><a name="initialize-project" class="plugin-anchor" href="#initialize-project"><i class="fa fa-link" aria-hidden="true"></i></a>Initialize Project</h2>
-<pre><code class="lang-js">npm init
-npm install --save-dev gulp
-</code></pre>
+<h2 id="red-green-refactor-cycle"><a name="red-green-refactor-cycle" class="plugin-anchor" href="#red-green-refactor-cycle"><i class="fa fa-link" aria-hidden="true"></i></a>Red-green-refactor cycle</h2>
 <ul>
-<li><code>gulp</code> will show up in the <code>devDependencies</code> section in <code>package.json</code>.</li>
+<li>Write test which will fail.</li>
+<li>Write the code to make the test pass.</li>
+<li>Refactor the code.</li>
 </ul>
-<h2 id="create-gulpfile"><a name="create-gulpfile" class="plugin-anchor" href="#create-gulpfile"><i class="fa fa-link" aria-hidden="true"></i></a>Create <code>gulpfile</code></h2>
-<ul>
-<li>Create <code>gulpfile.js</code> with the following skeleton code:</li>
-</ul>
-<pre><code class="lang-js"><span class="hljs-keyword">const</span> gulp = <span class="hljs-built_in">require</span>(<span class="hljs-string">&quot;gulp&quot;</span>);
-
-<span class="hljs-comment">// default default task</span>
-gulp.task(<span class="hljs-string">&quot;default&quot;</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
-});
-</code></pre>
-<ul>
-<li>Run <code>gulp</code> to run the build.</li>
-</ul>
-<h2 id="process-css"><a name="process-css" class="plugin-anchor" href="#process-css"><i class="fa fa-link" aria-hidden="true"></i></a>Process CSS</h2>
-<ul>
-<li>Install <code>gulp-sass</code></li>
-</ul>
-<pre><code class="lang-sh">npm install gulp-sass
-</code></pre>
-<ul>
-<li>Import <code>gulp-sass</code></li>
-</ul>
-<pre><code class="lang-js"><span class="hljs-keyword">const</span> sass = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;gulp-sass&apos;</span>);
-</code></pre>
-<ul>
-<li>Create a <code>styles</code> task</li>
-</ul>
-<pre><code class="lang-js">gulp.task(<span class="hljs-string">&quot;styles&quot;</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
-  gulp
-    <span class="hljs-comment">// looks for files inside sass folder</span>
-    .src(<span class="hljs-string">&quot;sass/**/*.scss&quot;</span>)
-    <span class="hljs-comment">// run through sass</span>
-    .pipe(sass())
-    <span class="hljs-comment">// display errors, if any</span>
-    .on(<span class="hljs-string">&quot;error&quot;</span>, sass.logError)
-    <span class="hljs-comment">// put newly transpiled code into css</span>
-    .pipe(gulp.dest(<span class="hljs-string">&quot;./css&quot;</span>));
-});
-<span class="hljs-string">`
-</span></code></pre>
 
                                 
                                 </section>
@@ -693,14 +637,10 @@ gulp.task(<span class="hljs-string">&quot;default&quot;</span>, <span class="hlj
 
             
                 
-                <a href="01-productive-sublime.html" class="navigation navigation-prev " aria-label="Previous page: Productive Sublime">
+                <a href="01-rethinking-testing.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: Rethinking testing">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
-                
-                <a href="03-live-editing.html" class="navigation navigation-next " aria-label="Next page: Live Editing">
-                    <i class="fa fa-angle-right"></i>
-                </a>
                 
             
         
@@ -709,7 +649,7 @@ gulp.task(<span class="hljs-string">&quot;default&quot;</span>, <span class="hlj
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Build with Gulp","level":"1.7.2","depth":2,"next":{"title":"Live Editing","level":"1.7.3","depth":2,"path":"web-tooling-automation/03-live-editing.md","ref":"web-tooling-automation/03-live-editing.md","articles":[]},"previous":{"title":"Productive Sublime","level":"1.7.1","depth":2,"path":"web-tooling-automation/01-productive-sublime.md","ref":"web-tooling-automation/01-productive-sublime.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["-sharing","github","anchors","splitter"],"pluginsConfig":{"github":{"url":"https://github.com/tuliren/javascript-notes"},"anchors":{},"splitter":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"web-tooling-automation/02-build-with-gulp.md","mtime":"2019-08-04T01:23:14.249Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-08-20T07:12:58.591Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Writing test suites","level":"1.6.2","depth":2,"next":{"title":"Web Tooling Automation","level":"1.7","depth":1,"ref":"","articles":[{"title":"Productive Sublime","level":"1.7.1","depth":2,"path":"web-tooling-automation/01-productive-sublime.md","ref":"web-tooling-automation/01-productive-sublime.md","articles":[]},{"title":"Build with Gulp","level":"1.7.2","depth":2,"path":"web-tooling-automation/02-build-with-gulp.md","ref":"web-tooling-automation/02-build-with-gulp.md","articles":[]},{"title":"Live Editing","level":"1.7.3","depth":2,"path":"web-tooling-automation/03-live-editing.md","ref":"web-tooling-automation/03-live-editing.md","articles":[]},{"title":"Linting","level":"1.7.4","depth":2,"path":"web-tooling-automation/04-linting.md","ref":"web-tooling-automation/04-linting.md","articles":[]},{"title":"Unit Test","level":"1.7.5","depth":2,"path":"web-tooling-automation/05-unit-test.md","ref":"web-tooling-automation/05-unit-test.md","articles":[]},{"title":"Optimization","level":"1.7.6","depth":2,"path":"web-tooling-automation/06-optimization.md","ref":"web-tooling-automation/06-optimization.md","articles":[]}]},"previous":{"title":"Rethinking testing","level":"1.6.1","depth":2,"path":"javascript-testing/01-rethinking-testing.md","ref":"javascript-testing/01-rethinking-testing.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["-sharing","github","anchors","splitter"],"pluginsConfig":{"github":{"url":"https://github.com/tuliren/javascript-notes"},"anchors":{},"splitter":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"javascript-testing/02-writing-test-suites.md","mtime":"2019-08-20T07:12:41.885Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-08-20T07:12:58.591Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
