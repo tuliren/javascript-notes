@@ -3,7 +3,8 @@
     "-sharing",
     "github",
     "anchors",
-    "splitter"
+    "splitter",
+    "expandable-chapters"
   ],
 
   "pluginsConfig": {
