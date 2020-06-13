@@ -12,6 +12,7 @@
   - Compatiable with most JS build tools
 
 ## Browser Sync
+
 1. Install browser-sync
   - Install locally
 
@@ -20,6 +21,7 @@ npm install browser-sync
 ```
 
 2. Add browser-sync to `gulpfile.js`
+
 ```js
 const browserSync = require('browser-sync').create();
 
