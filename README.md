@@ -1,5 +1,7 @@
 # JavaScript Notes
 
+[![publish](https://github.com/tuliren/javascript-notes/workflows/publish/badge.svg)](https://tuliren.dev/javascript-notes/)
+
 ## Intro to JavaScript
 Source: [Udacity 803](https://www.udacity.com/course/intro-to-javascript--ud803)
 * [Overview](intro-to-javascript/01-javascript.md)
