@@ -1,0 +1,9 @@
+---
+version: 1
+enabled: true
+tasks:
+  gitbook-preview:
+    static_hosting:
+      path: _book/
+  job-runtime:
+    job_runtime:
